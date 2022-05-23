@@ -47,16 +47,16 @@ $(".scroll-to-top").on("click", function(event) {
 });
 
 
-//preloader js code
-$(".preloader").delay(300).animate({
-  "opacity" : "0"
-  }, 300, function() {
-  $(".preloader").css("display","none");
-});
+// //preloader js code
+// $(".preloader").delay(300).animate({
+//   "opacity" : "0"
+//   }, 300, function() {
+//   $(".preloader").css("display","none");
+// });
 
-$(function () {
-  $('[data-toggle="tooltip"]').tooltip()
-})
+// $(function () {
+//   $('[data-toggle="tooltip"]').tooltip()
+// })
 
 
 
