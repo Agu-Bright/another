@@ -259,7 +259,7 @@
                             <label>Confirm Password</label>
                             <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password" required>
                           </div>
-                        <div class="form-group">
+                        <!-- <div class="form-group">
                             <label >Country</label>
                             <select name="country" id="country" class="form-control" style="color:#fff; background:#000;">
                                 <option data-mobile_code="93" value="Afghanistan" data-code="AF">Afghanistan</option>
@@ -516,7 +516,7 @@
                         </div>
                         <input type="text" name="mobile" class="form-control" value="" placeholder="Your Phone Number" required>
                     </div>
-                  </div>
+                  </div> -->
 
                   <div class="form-group d-flex justify-content-center"></div>
                   <div class="form-group">
@@ -773,9 +773,9 @@
 <script>
     (function () {
         "use strict";
-        $(document).on("change", ".langSel", function () {
-            window.location.href = "https://mutualassets.net/change/" + $(this).val();
-        });
+        // $(document).on("change", ".langSel", function () {
+        //     window.location.href = "https://mutualassets.net/change/" + $(this).val();
+        // });
 
         $('.policy').on('click',function(){
             $.ajaxSetup({
@@ -790,7 +790,7 @@
         });
     })();
 </script>
-<script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="810bb48a-ded2-4e67-b2db-53129045fa2b";(function(){d=document;s=d.createElement("script");s.src="../client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+<!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="810bb48a-ded2-4e67-b2db-53129045fa2b";(function(){d=document;s=d.createElement("script");s.src="../client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
 
 </body>
 

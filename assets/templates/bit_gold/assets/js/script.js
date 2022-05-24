@@ -655,9 +655,9 @@
 	}
 
 
-	$(document).ready(function() {
-      $('select:not(.ignore)').niceSelect();
-    });
+	// $(document).ready(function() {
+    //   $('select:not(.ignore)').niceSelect();
+    // });
 
 
     //Sortable Masonary with Filters

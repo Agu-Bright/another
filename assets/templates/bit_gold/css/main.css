@@ -50,7 +50,7 @@ span {
 }
 
 a:hover {
-    color: #cca354;
+    color: #1574e9;
 }
 
 /* reset css end */
@@ -236,7 +236,7 @@ a:hover {
 }
 
 .base--bg {
-    background-color: #cca354 !important;
+    background-color: #1574e9 !important;
 }
 
 .base--bg-two {
@@ -314,7 +314,7 @@ a:hover {
 }
 
 .base--color {
-    color: #cca354 !important;
+    color: #1574e9 !important;
 }
 
 .p--color {
@@ -364,7 +364,7 @@ a:hover {
 }
 
 .bg--base {
-    background-color: #cca354 !important;
+    background-color: #1574e9 !important;
 }
 
 .text-line-1 {
@@ -409,7 +409,7 @@ a:hover {
 .section-top-title {
     font-size: 18px;
     font-family: "Exo", sans-serif;
-    color: #cca354;
+    color: #1574e9;
     text-transform: capitalize;
 }
 
@@ -461,7 +461,7 @@ a:hover {
     width: 50px;
     margin-left: -25px;
     height: 2px;
-    background-color: #cca354;
+    background-color: #1574e9;
 }
 
 .section-title + p {
@@ -526,7 +526,7 @@ a:hover {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background-color: #cca354;
+    background-color: #1574e9;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
@@ -550,7 +550,7 @@ a:hover {
     left: 0;
     top: 0;
     border-radius: 74px;
-    background-color: #cca354;
+    background-color: #1574e9;
     opacity: 0.15;
     z-index: -10;
 }
@@ -819,8 +819,8 @@ a:hover {
 }
 
 .nav-tabs.custom--style .nav-item .nav-link.active {
-    border-color: #cca354;
-    color: #cca354;
+    border-color: #1574e9;
+    color: #1574e9;
 }
 
 .nav-tabs.custom--style-two {
@@ -848,9 +848,9 @@ a:hover {
 }
 
 .nav-tabs.custom--style-two .nav-item .nav-link.active {
-    border-color: #cca354;
+    border-color: #1574e9;
     color: #ffffff;
-    background-color: #cca354;
+    background-color: #1574e9;
 }
 
 .cmn-list {
@@ -873,8 +873,8 @@ a:hover {
     left: 0;
     width: 20px;
     height: 10px;
-    border-left: 1px solid #cca354;
-    border-bottom: 1px solid #cca354;
+    border-left: 1px solid #1574e9;
+    border-bottom: 1px solid #1574e9;
     -webkit-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     transform: rotate(-45deg);
@@ -930,7 +930,7 @@ a:hover {
 
 .number-list--style li span {
     font-weight: 500;
-    color: #cca354;
+    color: #1574e9;
 }
 
 .disc-list--style {
@@ -955,11 +955,11 @@ a:hover {
     -o-border-radius: 3px !important;
 }
 .pagination li.disabled .page-link {
-    background-color: #CCA354;
+    background-color: #1574e9;
 }
 .pagination li.active .page-link {
-    background-color: #CCA354;
-    border-color: #CCA354;
+    background-color: #1574e9;
+    border-color: #1574e9;
     color: #FFFFFF;
 }
 .pagination li .page-link {
@@ -975,12 +975,12 @@ a:hover {
     font-weight: 700;
 }
 .pagination li .page-link:hover {
-    background-color: #CCA354;
-    border-color: #CCA354;
+    background-color: #1574e9;
+    border-color: #1574e9;
     color: #FFFFFF;
 }
 .page-item.disabled .page-link {
-    border-color: #CCA354;
+    border-color: #1574e9;
 }
 .cmn-accordion .card + .card {
     margin-top: 15px;
@@ -1010,7 +1010,7 @@ a:hover {
 }
 
 .cmn-accordion .card-header .btn {
-    background-color: #cca354;
+    background-color: #1574e9;
     padding: 15px 20px;
     display: inline-flex;
     display: -ms-inline-flexbox;
@@ -1062,7 +1062,7 @@ blockquote p {
 input:focus,
 textarea:focus,
 .nice-select.open {
-    border-color: #cca354;
+    border-color: #1574e9;
 }
 
 .page-breadcrumb {
@@ -1088,7 +1088,7 @@ textarea:focus,
     content: "\f015";
     font-family: "Font Awesome 5 Free";
     font-weight: 900;
-    color: #cca354;
+    color: #1574e9;
     margin-right: 6px;
 }
 
@@ -1102,7 +1102,7 @@ textarea:focus,
 }
 
 .page-breadcrumb li a:hover {
-    color: #cca354;
+    color: #1574e9;
 }
 
 .scroll-to-top {
@@ -1116,7 +1116,7 @@ textarea:focus,
     cursor: pointer;
     text-align: center;
     border-radius: 50%;
-    background-color: #cca354;
+    background-color: #1574e9;
     line-height: 77px;
     box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.25);
 }
@@ -1303,7 +1303,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     position: absolute;
     top: 0;
     left: 0;
-    background: #cca354;
+    background: #1574e9;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -1344,7 +1344,7 @@ a[class*='lightcase-icon-'].lightcase-icon-close {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    background: #cca354;
+    background: #1574e9;
     -webkit-animation: preloader-inside-red 1s ease-in-out infinite;
     -ms-animation: preloader-inside-red 1s ease-in-out infinite;
     animation: preloader-inside-red 1s ease-in-out infinite;
@@ -1487,7 +1487,7 @@ a:hover {
 }
 
 .table.style--two thead {
-    background-color: #cca354;
+    background-color: #1574e9;
 }
 
 .table.style--two thead tr th {
@@ -1710,7 +1710,7 @@ a:hover {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    background-color: #cca354;
+    background-color: #1574e9;
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
     -webkit-transition: all 0.3s;
     -o-transition: all 0.3s;
@@ -1767,9 +1767,9 @@ a:hover {
 }
 
 .border-btn:hover {
-    background-color: #cca354;
+    background-color: #1574e9;
     color: #000000;
-    border-color: #cca354;
+    border-color: #1574e9;
     box-shadow: 0px 25px 40px 0px rgba(51, 51, 51, 0.1);
 }
 
@@ -1780,7 +1780,7 @@ a:hover {
     font-weight: 600;
     text-transform: uppercase;
     background-color: rgba(204, 163, 84, 0.14);
-    color: #cca354;
+    color: #1574e9;
     text-align: center;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1793,7 +1793,7 @@ a:hover {
 }
 
 .read-btn:hover {
-    background-color: #cca354;
+    background-color: #1574e9;
     color: #ffffff;
 }
 
@@ -1827,7 +1827,7 @@ a:hover {
     padding: 5px 15px;
     font-weight: 600;
     background-color: #ffffff;
-    color: #cca354;
+    color: #1574e9;
     font-size: 14px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -1882,7 +1882,7 @@ a:hover {
 
 .form-control:focus {
     box-shadow: 0 2px 5px rgba(204, 163, 84, 0.5);
-    border-color: #cca354;
+    border-color: #1574e9;
     background-color: transparent;
     color: #ffffff;
 }
@@ -1904,7 +1904,7 @@ select {
 }
 
 select option {
-    background-color: #cca354;
+    background-color: #1574e9;
     padding: 10px 0;
     display: block;
     border-top: 1px solid #e5e5e5;
@@ -1981,7 +1981,7 @@ input[type="email"]:read-only,
 input[type="text"]:disabled,
 input[type="email"]:disabled {
     background-color: rgba(204, 163, 84, 0.35);
-    border-color: #cca354;
+    border-color: #1574e9;
 }
 
 /* form css end*/
@@ -2486,7 +2486,7 @@ input[type="email"]:disabled {
     -webkit-transform: rotate(180deg);
     -ms-transform: rotate(180deg);
     transform: rotate(180deg);
-    color: #cca354;
+    color: #1574e9;
 }
 
 .header .main-menu li a {
@@ -2506,7 +2506,7 @@ input[type="email"]:disabled {
 }
 
 .header .main-menu li a:hover, .header .main-menu li a:focus {
-    color: #cca354;
+    color: #1574e9;
 }
 
 .header .main-menu li .sub-menu {
@@ -2515,7 +2515,7 @@ input[type="email"]:disabled {
     top: 105%;
     left: -20px;
     z-index: 9999;
-    background-color: #cca354;
+    background-color: #1574e9;
     padding: 10px 0;
     -webkit-box-shadow: 0px 18px 54px -8px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 18px 54px -8px rgba(0, 0, 0, 0.15);
@@ -2621,7 +2621,7 @@ input[type="email"]:disabled {
 .account-menu .icon i {
     width: 47px;
     height: 45px;
-    background-color: #CCA354;
+    background-color: #1574e9;
     color: #FFFFFF;
     display: flex;
     justify-content: center;
@@ -2897,7 +2897,7 @@ span.is-active:after {
 /* package section css start */
 .package-card {
     padding: 30px;
-    border: 3px solid #cca354;
+    border: 3px solid #1574e9;
     background-color: #000000;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -2943,7 +2943,7 @@ span.is-active:after {
 /* choose us section css start */
 .choose-card {
     padding: 30px;
-    background-color: #cca354;
+    background-color: #1574e9;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -3000,7 +3000,7 @@ span.is-active:after {
     top: 85px;
     width: 450px;
     height: 2px;
-    border-top: 1px dashed #cca354;
+    border-top: 1px dashed #1574e9;
     z-index: -1;
 }
 
@@ -3028,7 +3028,7 @@ span.is-active:after {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    border: 3px solid #cca354;
+    border: 3px solid #1574e9;
     box-shadow: 0 0 15px 3px rgba(204, 163, 84, 0.65);
     margin: 0 auto;
     display: flex;
@@ -3049,7 +3049,7 @@ span.is-active:after {
     justify-content: center;
     align-items: center;
     font-size: 13px;
-    border: 2px solid #cca354;
+    border: 2px solid #1574e9;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -3075,7 +3075,7 @@ span.is-active:after {
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
-    box-shadow: 0 5px 0px #cca354;
+    box-shadow: 0 5px 0px #1574e9;
 }
 
 .testimonial-card__content {
@@ -3092,7 +3092,7 @@ span.is-active:after {
     width: 75px;
     height: 75px;
     overflow: hidden;
-    border: 3px solid #cca354;
+    border: 3px solid #1574e9;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -3145,7 +3145,7 @@ span.is-active:after {
 }
 
 .testimonial-slider .slick-dots li.slick-active button {
-    background-color: #cca354;
+    background-color: #1574e9;
     width: 35px;
 }
 
@@ -3180,7 +3180,7 @@ span.is-active:after {
 }
 
 .team-card:hover {
-    background-color: #cca354;
+    background-color: #1574e9;
     box-shadow: 0 5px 10px 5px rgba(204, 163, 84, 0.5);
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -3230,7 +3230,7 @@ span.is-active:after {
 }
 
 .investor-card:hover {
-    background-color: #cca354;
+    background-color: #1574e9;
     box-shadow: 0 5px 10px 5px rgba(204, 163, 84, 0.5);
     -webkit-transform: translateY(-5px);
     -ms-transform: translateY(-5px);
@@ -3349,11 +3349,11 @@ span.is-active:after {
 }
 
 .blog-card__meta li i {
-    color: #cca354;
+    color: #1574e9;
 }
 
 .blog-card__meta li a {
-    color: #cca354;
+    color: #1574e9;
 }
 
 /* blog section css end */
@@ -3378,7 +3378,7 @@ span.is-active:after {
     font-size: 30px;
     font-weight: 700;
     color: #ffffff;
-    background-color: #cca354;
+    background-color: #1574e9;
     padding: 10px 5px;
     width: 100%;
     line-height: 1;
@@ -3416,7 +3416,7 @@ blockquote {
     font-style: italic;
     text-align: center;
     padding: 50px 60px;
-    background-color: #cca354;
+    background-color: #1574e9;
 }
 
 @media (max-width: 575px) {
@@ -3454,7 +3454,7 @@ blockquote {
 }
 
 .blog-details__footer .social__links li a:hover {
-    background-color: #cca354;
+    background-color: #1574e9;
     color: #ffffff;
 }
 
@@ -3490,7 +3490,7 @@ blockquote {
 
 .subscribe-form .subscribe-btn {
     width: 65px;
-    background-color: #cca354;
+    background-color: #1574e9;
     color: #000000;
     border-radius: 0 3px 3px 0;
     -webkit-border-radius: 0 3px 3px 0;
@@ -3563,7 +3563,7 @@ blockquote {
 .contact-item {
     height: 100%;
     padding: 30px;
-    background-color: #cca354;
+    background-color: #1574e9;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -3581,7 +3581,7 @@ blockquote {
 }
 
 .contact-item a:hover {
-    color: #cca354;
+    color: #1574e9;
 }
 
 .contact-item h5 {
@@ -3600,7 +3600,7 @@ blockquote {
 /* dashboard section css start */
 .d-widget {
     padding: 20px 10px;
-    background-color: #cca354;
+    background-color: #1574e9;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -3614,7 +3614,7 @@ blockquote {
     text-align: center;
     line-height: 50px;
     background-color: #000000;
-    color: #cca354;
+    color: #1574e9;
     font-size: 32px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -3624,7 +3624,7 @@ blockquote {
 }
 
 .d-widget .amount {
-    color: #cca354;
+    color: #1574e9;
     line-height: 1;
 }
 
@@ -3720,7 +3720,7 @@ blockquote {
 .sidebar .widget {
     padding: 30px;
     background-color: #000000;
-    border: 1px solid #cca354;
+    border: 1px solid #1574e9;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -3741,7 +3741,7 @@ blockquote {
     bottom: 0;
     width: 20px;
     height: 2px;
-    background-color: #cca354;
+    background-color: #1574e9;
 }
 
 .sidebar .small-post-list .small-post {
