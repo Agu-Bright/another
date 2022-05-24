@@ -7,12 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
-
-    require 'header.php';
-    ?>
-    <h1>
-        This is the dashboard page.!
-    </h1>
+    <h1>Bright here will be that page where the bitcoin address and upload payment evidence will be. </h1>
+    <h2>Na jst incase you open reach here make you no confuse.</h2>
 </body>
 </html>

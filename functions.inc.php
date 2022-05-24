@@ -23,6 +23,16 @@ function invalidUid($username){
     return $result;
 }
 
+function invalidamount($amount){
+    $result;
+    if (!is_numeric($amount)){
+        $result = true;
+    }else {
+        $result = false;
+    }
+    return $result;
+}
+
 
 
 
@@ -125,7 +135,7 @@ function loginUser($conn, $username, $pwd){
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUsername"];
-        header("location:dashboard.php");
+        header("location:dashboard.html");
         exit();
     }
 }
