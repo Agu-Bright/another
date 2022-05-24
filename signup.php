@@ -111,7 +111,7 @@
              
                 <h3>Recent Search Keywords</h3>
                 <ul class="recent-searches">
-                    <li><a href="login.html">Investor Login</a></li>
+                    <li><a href="login.php">Investor Login</a></li>
                     <li><a href="plan.html">Pricing Plan</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact Us</a></li>
@@ -157,7 +157,7 @@
                                     <li><a href="about.html">About</a></li>
                                     <li><a href="contact.html">Contact</a></li> 
                                     <li><a href="signup.php">Sign Up</a></li>
-                                    <li><a href="login.html">Investor Login</a></li>
+                                    <li><a href="login.php">Investor Login</a></li>
                                     <li><div id="ytWidget"></div><script src="../translate.yandex.net/website-widget/v1/widget80d6.js?widgetId=ytWidget&amp;pageLang=en&amp;widgetTheme=light&amp;autoMode=false" type="text/javascript"></script></li>
                                 </ul>
                             </div>
@@ -230,7 +230,7 @@
                     
                     
                     
-                    <form action=" " class="mt-4" onsubmit="return submitUserForm();" method="post">
+                    <form action="signup.inc.php" class="mt-4"  method="post">
                         <input type="hidden" name="" value="">
                         <div class="form-group">
                             <label>Full Name</label>
@@ -252,12 +252,12 @@
                         
                           <div class="form-group">
                             <label>Password</label>
-                            <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+                            <input type="password" name="pwd" class="form-control" placeholder="Enter password" required>
                           </div>
                         
                           <div class="form-group">
                             <label>Confirm Password</label>
-                            <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm Password" required>
+                            <input type="password" name="repwd" class="form-control" placeholder="Confirm Password" required>
                           </div>
                         <!-- <div class="form-group">
                             <label >Country</label>
@@ -540,7 +540,7 @@
 
 
                     <div class="mt-3">
-                        <button type="submit" class="cmn-btn">SignUp Now</button>
+                        <button type="submit" class="cmn-btn" name="submit">SignUp Now</button>
                     </div>
 
                     <div class="form-row mt-2">

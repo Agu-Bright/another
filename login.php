@@ -224,16 +224,17 @@
               <div class="account-card__header bg_img overlay--one" data-background="assets/images/frontend/login/5fce3a1188a861607350801.jpg">
                 <h2 class="section-title"style = "padding-top:100px"><span class="base--color">Welcome To wisetech Global Company</span></h2>
                 <p>Most Trusted Cryptocurrency Platform</p>
+               
                 <center>
               </div>
               <div class="account-card__body">
-                <form action=" " class="mt-4" method="post" onsubmit="return submitUserForm();">
+                <form action="login.inc.php" class="mt-4" method="post" >
 
                   <input type="hidden" name="" value=" "> 
 
                    <div class="form-group">
                     <label>User Name</label>
-                    <input type="text" class="form-control" name="username" placeholder="Enter user name" required>
+                    <input type="text" class="form-control" name="uid" placeholder="Enter user name" required>
                   </div>
 
                   <div class="form-group">
@@ -260,7 +261,7 @@
                   </div> -->
     
                   <div class="mt-3">
-                    <button type="submit" class="cmn-btn">Login Now</button>
+                    <button type="submit" class="cmn-btn" name="submit">Login Now</button>
                   </div>
     
 
@@ -272,7 +273,7 @@
                       </div>
                     </div>
                     <div class="col-sm-6 text-sm-right">
-                      <p class="f-size-14">Haven't an account? <a href="register.html" class="base--color">Sign Up</a></p>
+                      <p class="f-size-14">Haven't an account? <a href="signup.php" class="base--color">Sign Up</a></p>
                     </div>
                   </div>
 
