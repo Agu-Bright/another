@@ -220,7 +220,7 @@
           <div class="col-xl-5 col-lg-7">
             <div class="account-card">
               <div class="account-card__header bg_img overlay--one" data-background="assets/images/frontend/register/5fce3a4f5d06e1607350863.jpg">
-                  <h2 class="section-title" style = "padding-top:100px"><span class="base--color">Welcome To Wisetech Global Company</span></h2>
+                  <h2 class="section-title" style = "padding-top:100px"><span class="base--color">Register With Wisetech Global Company</span></h2>
                   <p>Most Trusted Cryptocurrency Platform</p>
                 </div>
 

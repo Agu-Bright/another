@@ -207,7 +207,7 @@
             <div class="contact-info">
                 <h4>Contact Info</h4>
                 <ul>
-                    <li>Wordsworth Street, Sydenham, , New Zealand</li>
+                    <li>Wordsworth Street, Sydenham, New Zealand</li>
                     <li><a href="mailto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
                 </ul>
             </div>
@@ -245,20 +245,7 @@
                     </div>
                   <div class="form-group">
                     <link href="https://fonts.googleapis.com/css?family=Henny+Penny&amp;display=swap" rel="stylesheet">
-                    <!-- <div style="height: 46px; line-height: 46px; width:100%; text-align: center; background-color: #003; color: #cc5454!important; font-size: 26px; font-weight: bold; letter-spacing: 20px; font-family: 'Henny Penny', cursive;  -webkit-user-select: none; -moz-user-select: none;-ms-user-select: none;user-select: none;  display: flex; justify-content: center;" class="captcha">
-                    <span style="    float:left;     -webkit-transform: rotate(-27deg);">6</span>
-                    <span style="    float:left;     -webkit-transform: rotate(3deg);">8</span>
-                    <span style="    float:left;     -webkit-transform: rotate(-16deg);">7</span>
-                    <span style="    float:left;     -webkit-transform: rotate(-37deg);">7</span>
-                    <span style="    float:left;     -webkit-transform: rotate(22deg);">7</span>
-                    <span style="    float:left;     -webkit-transform: rotate(-22deg);">2</span>
-                </div>
-                <input type="hidden" name="captcha_secret" value="c2788aeab7ad03cb421d077979e8ec112b5709a85c8d058b067b80e4f35c7866">    </div> -->
-
-
-                  <!-- <div class="form-group">
-                      <input type="text" name="captcha" class="form-control" placeholder="Enter code" autocomplete="off" required>
-                  </div> -->
+                    
     
                   <div class="mt-3">
                     <button type="submit" class="cmn-btn" name="submit">Login Now</button>
