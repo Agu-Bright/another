@@ -150,7 +150,7 @@
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Payment by Bitcoin</h1>
+                <h1>Payment by Ethereum</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>payment</li>
@@ -164,15 +164,13 @@
 
     
 
+        <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+            <label style = "color : black;" for="">Enter Amount:</label>
+            <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
 
-      <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
-        <label style = "color : black;" for="">Enter Amount:</label>
-        <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
-        <input style = "border: 1px solid gray" type="text" name="gateway" value="Bitcoin">
-
-        <hr/>
-        <button  class="btn btn-primary" name="submit">Next</button>
-      </form>
+            <hr/>
+            <button  class="btn btn-primary" name="submit">Next</button>
+        </form>
 
 
     </center>
