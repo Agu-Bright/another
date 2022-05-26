@@ -140,38 +140,24 @@ function loginUser($conn, $username, $pwd){
     }
 }
 
-// function emptyInputConfirm($username){
-//     $result;
-//     if (empty($username)) {
-//         $result = true;
-//     }else{
-//         $result = false;
-//     }
-//     return $result;
-// } 
+function createDeposit($conn, $gateway, $amount){
+    $sql = "INSERT INTO history (Gateway, Amount, Time) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:deposit-form.php?error=stmtfailed");
+        exit();
+    }
 
-// function confirmLogin($conn, $username){
-//     $uidExists = uidExists($conn, $username);
+    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $date = date("d-m-y h:sa");
 
-//     if($uidExists === false){
-//         header("location:confirm.php?error=invalidcode");
-//         exit();
-//     }else{
-//         header("location:login.php");
-//         exit();
-//     }
+    mysqli_stmt_bind_param($stmt, "sis", $amount, $gateway, $date);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header ('location:deposit-confirm.html');
+    require 'mailer.php';
+    exit();
 
-    // $pwdHashed = $uidExists["usersPassword"];
-    // $checkpwd = password_verify($pwd, $pwdHashed);
 
-    // if($checkpwd === false){
-    //     header("location:login.php?error=wronglogin");
-    //     exit();
-    // }elseif($checkpwd === true){
-    //     session_start();
-    //     $_SESSION["userid"] = $uidExists["usersId"];
-    //     $_SESSION["useruid"] = $uidExists["usersUsername"];
-    //     header("location:index.php");
-    //     exit();
-    // }
-// }
+}
+

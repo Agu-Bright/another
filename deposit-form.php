@@ -15,6 +15,9 @@
     <form action="payment-review.php" method="POST">
         <label for="">Enter Amount:</label>
         <input type="text" name="amount" placeholder="0.00">
+        <hr>
+        <label for="">Gateway</label>
+        <input type="text" name="gateway" value="Bitcoin">
 
         <hr>
         <button name="submit">Next</button>
