@@ -150,7 +150,7 @@
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Payment by Bitcoin</h1>
+                <h1>Payment by USDT</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>payment</li>
