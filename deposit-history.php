@@ -2,16 +2,12 @@
 
 require 'dbhandler.inc.php';
 
-$sql = 'SELECT * FROM history';
-$result = mysqli_query($conn, $sql);
-$transactions = mysqli_fetch_array($result);
-mysqli_free_result($result);
-mysqli_close($conn);
-// print_r($transactions);
-$id = $transactions[0];
-$Gateway = $transactions[1];
-$Amount = $transactions[2];
-$Time = $transactions[3];
+$sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
+$transactions = mysqli_fetch_row($sql);
+echo $transactions[0];
+echo $transactions[1];
+echo $transactions[2];
+echo $transactions[3];
 
 
 ?>
@@ -36,10 +32,10 @@ $Time = $transactions[3];
   </thead>
   <tbody>
     <tr>
-      <th scope="row"><?php echo $id; ?></th>
-      <td scope="row"><?php echo $Gateway; ?></td>
-      <td scope="row"><?php echo $Amount; ?></td>
-      <td scope="row"><?php echo $Time; ?></td>
+      <th scope="row"><?php echo $transactions[0]; ?></th>
+      <td scope="row"><?php echo $transactions[1]; ?></td>
+      <td scope="row"><?php echo $transactions[2]; ?></td>
+      <td scope="row"><?php echo $transactions[3]; ?></td>
     </tr>
   </tbody>
 </table>
