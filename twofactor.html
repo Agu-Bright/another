@@ -115,7 +115,7 @@
               </li>
 
               <li class="menu_has_children"><a href="#0">Account</a>
-              <ul class="sub-menu">
+                <ul class="sub-menu">
                     <li><a href="profile.html">Profile Settings</a></li>
                     <li><a href="transferbal.html">Transfer Balance</a></li>
                     <li><a href="change-password.html">Change Password</a></li>
@@ -145,41 +145,143 @@
   <!-- header-section end  -->
 
         <!--Page Title-->
-    <section class="page-title centred" style="background-image: url(assets/templates/bit_gold//assets/images/banner/pictures519.jpg);">
+    <section class="page-title centred mb-5" style="background-image: url(assets/templates/bit_gold//assets/images/banner/pictures519.jpg);">
         <div id="ytWidget"></div><script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false" type="text/javascript"></script>
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Payment by Ethereum</h1>
+                <h1>Two Factor</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
-                    <li>payment</li>
+                    <li>Two Factor</li>
                 </ul>
             </div>
         </div>
-    </section>
+    </section >
     <!--End Page Title-->
-
-    <center>
 
     
 
-        <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
-            <label style = "color : black;" for="">Enter Amount:</label>
-            <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
+    <section class="cmn-section">
+        <div class="container">
+            <div class="row dashboard-content">
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="dashboard-inner-content">
 
-            <hr/>
-            <button  class="btn btn-primary" name="submit">Next</button>
-        </form>
+                        <div class="row">
 
 
-    </center>
+                            <div class="col-lg-6 col-md-6">
+                                        <div class="card">
+
+                                        <h5 class="card-header">Two Factor Authenticator</h5>
+                                        <div class="card-body">
+                                            <div class="form-group">
+                                                <div class="input-group">
+                                                    <input type="text" name="key" value="XHHSUCZ6XTZJL4EW"
+                                                           class="form-control form-control-lg" id="referralURL"
+                                                           readonly>
+                                                    <div class="input-group-append">
+                                                        <span class="input-group-text copytext copyBoard" id="copyBoard"> <i class="fa fa-copy"></i> </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group mx-auto text-center">
+                                                <img class="mx-auto" src="https://chart.googleapis.com/chart?chs=200x200&amp;chld=M|0&amp;cht=qr&amp;chl=otpauth%3A%2F%2Ftotp%2FbubBbryson%40Mutual+Assets%3Fsecret%3DXHHSUCZ6XTZJL4EW">
+                                            </div>
+                                            <div class="form-group mx-auto text-center">
+
+                                                <a href="#0" class="btn btn-lg mt-3 mb-1 cmn-btn"
+                                                   data-toggle="modal"
+                                                   data-target="#enableModal">Enable Two Factor Authenticator</a>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    </div>
+
+                            <div class="col-lg-6 col-md-6">
+                                <div class=" card">
+                                    <h5 class="card-header">Google Authenticator</h5>
+                                    <div class=" card-body">
+                                        <h5 class="text-uppercase">Use Google Authenticator to Scan the QR code  or use the code</h5>
+                                        <hr/>
+                                        <p>Google Authenticator is a multifactor app for mobile devices. It generates timed codes used during the 2-step verification process. To use Google Authenticator, install the Google Authenticator application on your mobile device.</p>
+                                        <a class="btn btn-md mt-3 cmn-btn"
+                                           href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&hl=en"
+                                           target="_blank">DOWNLOAD APP</a>
+                                    </div>
+                                </div><!-- //. single service item -->
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!--/Dashboard area-->
+
+
+
+    <!--Enable Modal -->
+    <div id="enableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog ">
+            <!-- Modal content-->
+            <div class="modal-content modal-content-bg">
+                <div class="modal-header">
+                    <h4 class="modal-title">Verify your OTP</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form action="https://www.mutualassets.net/user/twofactor/enable" method="POST" class="register">
+                    <input type="hidden" name="_token" value="JHZGapQ0TtdtfNmspTpt6wAg2rBxBFMEpYC9h06w">                    <div class="modal-body ">
+                        <div class="form-group">
+                            <input type="hidden" name="key" value="XHHSUCZ6XTZJL4EW">
+                            <input type="text" class="form-control" name="code"
+                                   placeholder="Enter Google Authenticator Code">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger action-btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary action-btn">Verify</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <!--Disable Modal -->
+    <div id="disableModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content modal-content-bg">
+                <div class="modal-header">
+                    <h4 class="modal-title">Verify your OTP disable</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <form action="https://www.mutualassets.net/user/twofactor/disable" method="POST" class="register">
+                    <input type="hidden" name="_token" value="JHZGapQ0TtdtfNmspTpt6wAg2rBxBFMEpYC9h06w">                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="code"
+                                   placeholder="Enter Google Authenticator Code">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger action-btn" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary action-btn">Verify</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
 
 
 
 
     <!-- main-footer -->
-    <footer class="main-footer">
+    <footer class="main-footer mt-5">
         <div class="footer-top">
             <div class="auto-container">
                 <div class="widget-section">
