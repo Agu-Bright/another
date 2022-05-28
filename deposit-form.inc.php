@@ -16,11 +16,13 @@
             // exit();
         }
 
-        createDeposit($conn, $amount, $gateway);
+        createDeposit($conn, $adg, $email, $username, $pwd);
     
     
     }
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

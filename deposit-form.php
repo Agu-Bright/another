@@ -164,13 +164,17 @@
 
     
 
-        <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
-            <label style = "color : black;" for="">Enter Amount:</label>
-            <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
 
-            <hr/>
-            <button  class="btn btn-primary" name="submit">Next</button>
-        </form>
+      <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+        <label style = "color : black;" for="">Enter Amount:</label>
+        <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
+        <hr>
+        <label style = "color : black;" for="">Gateway:</label>
+        <input style = "border: 1px solid gray" type="text" name="gateway" value="Bitcoin">
+
+        <hr/>
+        <button  class="btn btn-primary" name="submit">Next</button>
+      </form>
 
 
     </center>
