@@ -1,13 +1,14 @@
 <?php
 
 require 'dbhandler.inc.php';
+// require 'mailer.inc.php';
 
 $sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
 $transactions = mysqli_fetch_row($sql);
-echo $transactions[0];
-echo $transactions[1];
-echo $transactions[2];
-echo $transactions[3];
+// echo $transactions[0];
+// echo $transactions[1];
+// echo $transactions[2];
+// echo $transactions[3];
 
 
 ?>
@@ -22,14 +23,18 @@ echo $transactions[3];
 </head>
 <body>
 <table class="table">
+
   <thead class="table-dark">
+
     <tr>
       <th scope="col">Transaction Id:</th>
       <th scope="col">Gateway</th>
       <th scope="col">Amount</th>
       <th scope="col">Time</th>
     </tr>
+
   </thead>
+  
   <tbody>
     <tr>
       <th scope="row"><?php echo $transactions[0]; ?></th>
