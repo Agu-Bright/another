@@ -123,7 +123,7 @@
             <div class="auto-container">
                 <div class="top-inner clearfix">
                     <ul class="info top-left pull-left">
-                        <li><i class="fas fa-map-marker-alt"></i>Wordsworth Street, Sydenham, , New Zealand</li>
+                        <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
                        
                     </ul>
                 </div>
@@ -307,7 +307,7 @@
                                     <p>We are a business inclined profitable investment company we all the right tools and experts to help you grow your investment.</p>
                                 </div>
                                 <ul class="info-list clearfix">
-                                    <li><i class="fas fa-map-marker-alt"></i>Wordsworth Street, Sydenham, , New Zealand</li>
+                                    <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
                                     <li><i class="fas fa-envelope"></i>Email <a href="mailto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
                                 </ul>
                             </div>
@@ -337,7 +337,7 @@
         </div>
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="copyright"><p>&copy; 2018 <a href="index.html">Wisetech Global</a> - Investment. All rights reserved.</p></div>
+                <div class="copyright"><p>&copy; 2022 <a href="index.html">Wisetech Global</a> - Investment. All rights reserved.</p></div>
             </div>
         </div>
     </footer>
@@ -376,7 +376,7 @@
                         <div class="info-box">
                             <h3>Get in touch</h3>
                             <ul class="info-list clearfix">
-                                <li><i class="fas fa-map-marker-alt"></i>Wordsworth Street, Sydenham, , New Zealand</li>
+                                <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
                                 <li><i class="fas fa-envelope"></i><a href="mailto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
                                 <li><i class="far fa-clock"></i>Monday to Friday: 9am - 6pm</li>
                             </ul>
