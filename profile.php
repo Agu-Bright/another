@@ -1,3 +1,15 @@
+<?php
+
+require 'dbhandler.inc.php';
+
+$sql = mysqli_query($conn, "SELECT * FROM users ORDER BY usersId DESC LIMIT 1");
+$transactions = mysqli_fetch_row($sql);
+// echo $transactions[1];
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -82,66 +94,11 @@
     </div>
     <!-- scroll-to-top end -->
   
-  
-    <div class="boxed_wrapper ltr">
-      <!-- header-section start  -->
-  <header class="header">
-    <div class="header__bottom">
-      <div class="container">
-        <nav class="navbar navbar-expand-xl p-0 align-items-center">
-          <a class="site-logo site-title" href="index.html"><img src="assets/images/logoIcon/logo.png" alt="site-logo"></a>
-          
-          <ul class="account-menu responsive-account-menu ml-3">
-            <li class="icon"><a href="dashboard"><i class="las la-user"></i></a></li>
-          </ul> 
-          
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="menu-toggle"></span>
-          </button>
+  <?php
 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav main-menu ml-auto">
-              <li> <a href="dashboard.html">Dashboard</a></li>
-              <li><a href="investment.html">Investment</a></li>
-              <li><a href="deposite.html">Deposit</a></li>
-              <li><a href="withdraw.html">Withdraw</a></li>
-              <li><a href="transaction.html">Transactions</a></li>
-              
-              <li class="menu_has_children"><a href="#0">Referrals</a>
-                <ul class="sub-menu">
-                  <li><a href="refuser.html">Referred Users</a></li>
-                  <li><a href="refcom.html">Referral Commissions</a></li>
-                </ul>
-              </li>
+  require 'something.php';
 
-              <li class="menu_has_children"><a href="#0">Account</a>
-                <ul class="sub-menu">
-                    <li><a href="profile.html">Profile Settings</a></li>
-                    <li><a href="transferbal.html">Transfer Balance</a></li>
-                    <li><a href="change-password.html">Change Password</a></li>
-                    <li><a href="support-ticket.html">Support Ticket</a></li>
-                    <li><a href="promotional-tool.html">Promotional Tools</a></li>
-                    <li><a href="twofactor.html">2FA Security</a></li>
-                    <li><a href="logout"> Logout</a></li>
-                  </ul>
-              </li>
-
-               <li><div id="ytWidget"></div><script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false" type="text/javascript"></script>
-
-                 </li>
-            </ul>
-            <div class="nav-right">
-              <ul class="account-menu ml-3">
-                <li class="icon"><a href="user/dashboard"><i class="las la-user"></i></a></li>
-              </ul>  
-          
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
-    <!-- header__bottom end -->
-  </header>
+  ?>
   <!-- header-section end  -->
 
         <!--Page Title-->
@@ -165,7 +122,7 @@
                 <div class="card">
 
 
-                    <form action="" method="post" enctype="multipart/form-data"> 
+                    <form action="profile.inc.php" method="post" > 
                         <div class="card-body">
                             <div class="row">
                                 <div class="col-md-4">
@@ -185,26 +142,26 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>First Name</label>
-                                            <input type="text" name="firstname" class="form-control form-control-lg" placeholder="First Name" value=" ">        
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Last Name</label>
-                                            <input type="text" name="lastname" class="form-control form-control-lg" placeholder="Last Name" value=" ">        
+                                            <label>Full Name</label>
+                                            <input type="text" name="name" class="form-control form-control-lg" placeholder="First Name" value=" <?php echo $transactions[1]; ?>">        
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Username</label>
-                                            <input type="text" name="username" class="form-control form-control-lg" placeholder="Username" value="" readonly>        
+                                            <input type="text" name="username" class="form-control form-control-lg" placeholder="Last Name" value="<?php echo $transactions[3]; ?> ">        
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Email</label>
-                                            <input type="text" name="email" class="form-control form-control-lg" placeholder="Email" value="">        
+                                            <input type="text" name="email" class="form-control form-control-lg" placeholder="Username" value=" <?php echo $transactions[2]; ?>" >        
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Country</label>
+                                            <input type="text" name="country" class="form-control form-control-lg" placeholder="Email" value="">        
                                         </div>
                                     </div>
                                 </div>
@@ -213,65 +170,65 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Mobile</label>
-                                            <input type="text" name="mobile" class="form-control form-control-lg" placeholder="Mobile" value="" disabled>        
+                                            <label>Mobile </label>
+                                            <input type="text" name="mobile" class="form-control form-control-lg" placeholder="Mobile" value="" >        
                                         </div>
                                     </div>
                                         <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>BTC Address</label>
-                                            <input type="text" name="btc_address" class="form-control form-control-lg" placeholder="BTC Address" value="">        
+                                            <label>State</label>
+                                            <input type="text" name="state" class="form-control form-control-lg" placeholder="BTC Address" value="">        
                                         </div>
                                     </div>
                                         <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Usdt</label>
-                                            <input type="text" name="perfect_address" class="form-control form-control-lg" placeholder="Usdt" value="">        
+                                            <label>City</label>
+                                            <input type="text" name="city" class="form-control form-control-lg" placeholder="Usdt" value="">        
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>ETH</label>
-                                            <input type="text" name="perfect_address" class="form-control form-control-lg" placeholder="eth" value="">        
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Country</label>
-                                            <input type="text" class="form-control" value="" disabled>    
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
                                             <label>Address</label>
-                                            <input type="text" name="address" class="form-control form-control-lg" placeholder="Address" value="">        
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>State</label>
-                                            <input type="text" name="state" class="form-control form-control-lg" placeholder="State" value="">        
+                                            <input type="text" name="address" class="form-control form-control-lg" placeholder="eth" value="">        
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Zip</label>
-                                            <input type="text" name="zip" class="form-control form-control-lg" placeholder="Zip" value="">        
+                                            <input type="text" name="zip" class="form-control" value="" >    
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
+                                            <label>BTC Address</label>
+                                            <input type="text" name="btc" class="form-control form-control-lg" placeholder="optional" value="">        
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Usdt Address</label>
+                                            <input type="text" name="usdt" class="form-control form-control-lg" placeholder="optional" value="">        
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>ETH Address</label>
+                                            <input type="text" name="eth" class="form-control form-control-lg" placeholder="optional" value="">        
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <!-- <div class="form-group">
                                             <label>City</label>
                                             <input type="text" name="city" class="form-control form-control-lg" placeholder="City" value="">        
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <button type="submit" class="btn btn-md w-100 cmn-btn">Update</button>
+                        <button type="submit" name="submit" class="btn btn-md w-100 cmn-btn">Update</button>
                     </div>
                     </form>
                 </div>

@@ -2,13 +2,14 @@
 <?php
 
 require 'dbhandler.inc.php';
+// require 'mailer.inc.php';
 
 $sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
 $transactions = mysqli_fetch_row($sql);
-echo $transactions[0];
-echo $transactions[1];
-echo $transactions[2];
-echo $transactions[3];
+// echo $transactions[0];
+// echo $transactions[1];
+// echo $transactions[2];
+// echo $transactions[3];
 
 
 ?>
@@ -18,6 +19,7 @@ echo $transactions[3];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Wisetech GLobal - Deposit Wallet Transactions</title>
     <meta name="description" content="Wisetech Global Company is at your service with its user-friendly features, secure infrastructure, and applications that make a difference. A firm for profitable investment solution, your financial stability, and freedom is our priority, join us to make your financial dreams come true">
     <meta name="keywords" content="Wisetech Global Company,Most Trusted Cryptocurrency Platform, wisetechglobal.com">
@@ -184,14 +186,25 @@ echo $transactions[3];
 
 
     <table class="table">
+=======
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+<table class="table">
+
+>>>>>>> be4e3459f342bfb930b4a3028a373a0b034ce503
   <thead class="table-dark">
+
     <tr>
       <th scope="col">Transaction Id:</th>
       <th scope="col">Gateway</th>
       <th scope="col">Amount</th>
       <th scope="col">Time</th>
     </tr>
+
   </thead>
+  
   <tbody>
     <tr>
       <th scope="row"><?php echo $transactions[0]; ?></th>

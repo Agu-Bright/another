@@ -17,8 +17,8 @@ try {
     $mail->isSMTP();                                            //Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'gashmanworks@gmail.com';                     //SMTP username
-    $mail->Password   = 'Tochukwu878';                               //SMTP password
+    $mail->Username   = 'wisetechglobals@gmail.com';                     //SMTP username
+    $mail->Password   = 'mendoza1998';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
@@ -31,7 +31,7 @@ try {
 
 
     //Recipients
-    $mail->setFrom('gashmanworks@gmail.com', 'WiseTech');
+    $mail->setFrom('wisetechglobals@gmail.com', 'WiseTech');
     $mail->addAddress($email, $email);     //Add a recipient
     // $mail->addAddress('ellen@example.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
@@ -43,7 +43,7 @@ try {
     // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
     $user = $_POST['name'];
     // $email = $_GET['Code'];
-    $body = "Hello ". $name. ",". "<p>You have successfully registered with WiseTech, Experienced. Specialized. Professional. We always Strive to be leaders and strategic planning of our development for years to come!</p><p>Your Confirmation code is: </p>". $hashedpwd."<p>Thank You!</p>";
+    $body = "Hello ". $name. ",". "<p>You have successfully registered with WiseTech, Experienced. Specialized. Professional. We always Strive to be leaders and strategic planning of our development for years to come!</p><p>Your Confirmation code is: </p>". $code."<p>Thank You!</p>";
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
