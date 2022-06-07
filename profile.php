@@ -266,8 +266,8 @@ $transactions = mysqli_fetch_row($sql);
                                 </div>
                                 <div class="widget-content">
                                     <ul class="list clearfix">
-                                        <li><a href="links/privacy-amp-policy/180">Privacy &amp; Policy</a></li>
-                                        <li><a href="links/terms-amp-condition/181">Terms &amp; Condition</a></li>
+                                        <li><a href="180.html">Privacy &amp; Policy</a></li>
+                                        <li><a href="181.html">Terms &amp; Condition</a></li>
                                         <li><a href="profile-setting.html">Profile Settings</a></li>
                                         <li><a href="contact.html">Reach Us</a></li>
                                         <li><a href=" ">View Referred Users</a></li>
