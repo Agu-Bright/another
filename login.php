@@ -377,7 +377,7 @@
                             <h3>Get in touch</h3>
                             <ul class="info-list clearfix">
                                 <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
-                                <li><i class="fas fa-envelope"></i><a href="mailto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
+                                <li><i class="fas fa-envelope"></i><a href="mailto:wisetechglobals@gmail.com">Support@wisetechglobals.com</a></li>
                                 <li><i class="far fa-clock"></i>Monday to Friday: 9am - 6pm</li>
                             </ul>
                         </div>
