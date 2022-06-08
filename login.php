@@ -82,6 +82,15 @@
     .cmn-btn{
         color:#fff!important;
     }
+    #wisetech-logo{
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        background-image: url('assets/images/logoIcon/logo.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
    </style>
   
   
@@ -132,8 +141,8 @@
         <div class="header-lower">
             <div class="auto-container">
                 <div class="outer-box clearfix">
-                    <div class="logo-box pull-left">
-                        <figure class="logo"><a href="index.html"><img src="assets/images/logoIcon/logo.png" alt="" style="width:250px;"></a></figure>
+                    <div id = "wisetech-logo" class="logo-box pull-left">
+                        <!-- <figure class="logo"><a href="index.html"><img src="assets/images/logoIcon/logo.png" alt="" style="width:250px;"></a></figure> -->
                     </div>
                     <div class="menu-area pull-right">
                         <!--Mobile Navigation Toggler-->
@@ -320,8 +329,8 @@
 
                                 <div class="widget-content">
                                     <ul class="list clearfix">
-                                        <li><a href="links/privacy-amp-policy/180.html">Privacy &amp; Policy</a></li>
-                                        <li><a href="links/terms-amp-condition/181.html">Terms &amp; Condition</a></li>
+                                        <li><a href="180.html">Privacy &amp; Policy</a></li>
+                                        <li><a href="181.html">Terms &amp; Condition</a></li>
                                         <li><a href="plan.html">What We Offer</a></li>
                                         <li><a href="contact.html">Reach Us</a></li>
                                         <li><a href="login.html">Investor Login</a></li>

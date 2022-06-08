@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>Wisetech Global Admin - Dashboard</title>
 
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -19,7 +19,15 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-
+    <style>
+        .main{
+            width: 8em;
+            height: 5em;
+            background-image: url('img/logo.png');
+            background-position: center;
+            background-size: contain;
+        }
+    </style>
 </head>
 
 <body id="page-top">
@@ -33,8 +41,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
 
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon main">
+                    <!-- <i class="fas fa-laugh-wink"></i> -->
+                    <!-- <img src="img/logo.png" alt=""> -->
                 </div>
                 <div class="sidebar-brand-text ">WiseTech Global Admin</div>
 
@@ -113,7 +122,7 @@
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Clients</span>
                 </a>
-                <!-- <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Login Screens:</h6>
                         <a class="collapse-item" href="login.html">Login</a>
@@ -159,6 +168,9 @@
         </ul>
         <!-- End of Sidebar -->
 
+
+
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -174,7 +186,7 @@
                     </button>
 
                     <!-- Topbar Search -->
-                    <form
+                    <!-- <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
                             <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
@@ -185,19 +197,19 @@
                                 </button>
                             </div>
                         </div>
-                    </form>
+                    </form> -->
 
                     <!-- Topbar Navbar -->
                     <ul class="navbar-nav ml-auto">
 
                         <!-- Nav Item - Search Dropdown (Visible Only XS) -->
-                        <li class="nav-item dropdown no-arrow d-sm-none">
-                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                        <!-- <li class="nav-item dropdown no-arrow d-sm-none"> -->
+                            <!-- <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-search fa-fw"></i>
-                            </a>
+                            </a> -->
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                            <!-- <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
                                 aria-labelledby="searchDropdown">
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
@@ -211,19 +223,19 @@
                                         </div>
                                     </div>
                                 </form>
-                            </div>
-                        </li>
+                            </div> -->
+                        <!-- </li> -->
 
                         <!-- Nav Item - Alerts -->
-                        <li class="nav-item dropdown no-arrow mx-1">
-                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                        <!-- <li class="nav-item dropdown no-arrow mx-1"> -->
+                            <!-- <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-bell fa-fw"></i>
+                                <i class="fas fa-bell fa-fw"></i> -->
                                 <!-- Counter - Alerts -->
-                                <span class="badge badge-danger badge-counter">3+</span>
-                            </a>
+                                <!-- <span class="badge badge-danger badge-counter">3+</span>
+                            </a> -->
                             <!-- Dropdown - Alerts -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
                                     Alerts Center
@@ -262,19 +274,19 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
-                            </div>
-                        </li>
+                            </div> -->
+                        <!-- </li> -->
 
                         <!-- Nav Item - Messages -->
-                        <li class="nav-item dropdown no-arrow mx-1">
+                        <!-- <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fas fa-envelope fa-fw"></i>
+                                <i class="fas fa-envelope fa-fw"></i> -->
                                 <!-- Counter - Messages -->
-                                <span class="badge badge-danger badge-counter">7</span>
-                            </a>
+                                <!-- <span class="badge badge-danger badge-counter">7</span>
+                            </a> -->
                             <!-- Dropdown - Messages -->
-                            <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            <!-- <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
                                     Message Center
@@ -328,8 +340,8 @@
                                     </div>
                                 </a>
                                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
-                            </div>
-                        </li>
+                            </div> -->
+                        <!-- </li> -->
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
@@ -337,7 +349,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Wisetech Global</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
@@ -375,22 +387,22 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                        <!-- <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                        class="fas fa-download fa-sm text-white-50"></i> Generate Report</a> -->
                     </div>
 
                     <!-- Content Row -->
                     <div class="row">
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Total Users  -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-primary shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Earnings (Monthly)</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$40,000</div>
+                                                USERS</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">50</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -400,14 +412,14 @@
                             </div>
                         </div>
 
-                        <!-- Earnings (Monthly) Card Example -->
+                        <!-- Total Earnings -->
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-left-success shadow h-100 py-2">
                                 <div class="card-body">
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Earnings (Annual)</div>
+                                                EARNINGS</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
                                         </div>
                                         <div class="col-auto">
@@ -468,13 +480,13 @@
 
                     <!-- Content Row -->
 
-                    <div class="row">
+                    <!-- <div class="row"> -->
 
                         <!-- Area Chart -->
-                        <div class="col-xl-8 col-lg-7">
-                            <div class="card shadow mb-4">
+                        <!-- <div class="col-xl-8 col-lg-7">
+                            <div class="card shadow mb-4"> -->
                                 <!-- Card Header - Dropdown -->
-                                <div
+                                <!-- <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
                                     <div class="dropdown no-arrow">
@@ -491,21 +503,21 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <!-- <div class="card-body">
                                     <div class="chart-area">
                                         <canvas id="myAreaChart"></canvas>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
+                                </div> -->
+                            <!-- </div>
+                        </div> -->
 
                         <!-- Pie Chart -->
-                        <div class="col-xl-4 col-lg-5">
-                            <div class="card shadow mb-4">
+                        <!-- <div class="col-xl-4 col-lg-5">
+                            <div class="card shadow mb-4"> -->
                                 <!-- Card Header - Dropdown -->
-                                <div
+                                <!-- <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                                     <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
                                     <div class="dropdown no-arrow">
@@ -522,9 +534,9 @@
                                             <a class="dropdown-item" href="#">Something else here</a>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <!-- Card Body -->
-                                <div class="card-body">
+                                <!-- <div class="card-body">
                                     <div class="chart-pie pt-4 pb-2">
                                         <canvas id="myPieChart"></canvas>
                                     </div>
@@ -542,16 +554,16 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
 
                     <!-- Content Row -->
-                    <div class="row">
+                    <!-- <div class="row"> -->
 
                         <!-- Content Column -->
-                        <div class="col-lg-6 mb-4">
+                        <!-- <div class="col-lg-6 mb-4"> -->
 
                             <!-- Project Card Example -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
                                 </div>
@@ -560,8 +572,8 @@
                                             class="float-right">20%</span></h4>
                                     <div class="progress mb-4">
                                         <div class="progress-bar bg-danger" role="progressbar" style="width: 20%"
-                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
+                                            aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div> -->
+                                    <!-- </div>
                                     <h4 class="small font-weight-bold">Sales Tracking <span
                                             class="float-right">40%</span></h4>
                                     <div class="progress mb-4">
@@ -590,7 +602,7 @@
                             </div>
 
                             <!-- Color System -->
-                            <div class="row">
+                            <!-- <div class="row">
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-primary text-white shadow">
                                         <div class="card-body">
@@ -615,11 +627,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6 mb-4">
-                                    <div class="card bg-warning text-white shadow">
+                                <div class="col-lg-6 mb-4"> -->
+                                    <!-- <div class="card bg-warning text-white shadow">
                                         <div class="card-body">
-                                            Warning
-                                            <div class="text-white-50 small">#f6c23e</div>
+                                            Warning --> 
+                                            <!-- <div class="text-white-50 small">#f6c23e</div>
                                         </div>
                                     </div>
                                 </div>
@@ -636,8 +648,8 @@
                                         <div class="card-body">
                                             Secondary
                                             <div class="text-white-50 small">#858796</div>
-                                        </div>
-                                    </div>
+                                        </div> -->
+                                    <!-- </div>
                                 </div>
                                 <div class="col-lg-6 mb-4">
                                     <div class="card bg-light text-black shadow">
@@ -657,11 +669,11 @@
                                 </div>
                             </div>
 
-                        </div>
+                        </div> -->
 
-                        <div class="col-lg-6 mb-4">
+                        <!-- <div class="col-lg-6 mb-4"> -->
 
-                            <!-- Illustrations -->
+                            <!-- Illustrations
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
@@ -678,10 +690,10 @@
                                     <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on
                                         unDraw &rarr;</a>
                                 </div>
-                            </div>
+                            </div> -->
 
                             <!-- Approach -->
-                            <div class="card shadow mb-4">
+                            <!-- <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
                                 </div>
@@ -695,34 +707,72 @@
                             </div>
 
                         </div>
-                    </div>
-
+                    </div> -->
+<!-- 
                 </div>
-                <!-- /.container-fluid -->
+                 /.container-fluid -->
 
             </div>
             <!-- End of Main Content -->
 
             <!-- Footer -->
-            <footer class="sticky-footer bg-white">
+            <!-- <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>Copyright &copy; Your Website 2022</span>
                     </div>
                 </div>
-            </footer>
+            </footer> --> 
             <!-- End of Footer -->
 
-        </div>
+        <!-- </div> -->
         <!-- End of Content Wrapper -->
 
-    </div>
+    <!-- </div> -->
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
+    <!-- <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
-    </a>
+    </a> -->
+
+    <div class="container">
+        <h2>User Information</h2>
+       <table class="table">
+          <thead>
+            <tr>
+              <th>Firstname</th>
+              <th>Lastname</th>
+              <th>Email</th>
+              <th>Investment</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John</td>
+              <td>Doe</td>
+              <td>john@example.com</td>
+              <td>Annual Package</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>Moe</td>
+              <td>mary@example.com</td>
+              <td>Annual Package</td>
+            </tr>
+            <tr>
+              <td>July</td>
+              <td>Dooley</td>
+              <td>july@example.com</td>
+              <td>Annual Package</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    
+
+
+       
 
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
