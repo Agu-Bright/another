@@ -28,7 +28,7 @@ if(isset($_POST["submit"])){
     exit();
   }
 
-  createDeposit($conn, $gateway, $amount);
+  createethDeposit($conn, $gateway, $amount);
 
     
 

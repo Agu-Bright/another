@@ -115,15 +115,15 @@
               </li>
 
               <li class="menu_has_children"><a href="#0">Account</a>
-              <ul class="sub-menu">
-                    <li><a href="profile.html">Profile Settings</a></li>
-                    <li><a href="transferbal.html">Transfer Balance</a></li>
-                    <li><a href="change-password.html">Change Password</a></li>
-                    <li><a href="support-ticket.html">Support Ticket</a></li>
-                    <li><a href="promotional-tool.html">Promotional Tools</a></li>
-                    <li><a href="twofactor.html">2FA Security</a></li>
-                    <li><a href="logout"> Logout</a></li>
-                  </ul>
+                <ul class="sub-menu">
+                  <li><a href="user/profile-setting">Profile Settings</a></li>
+                  <li><a href="user/transfer-balance">Transfer Balance</a></li>
+                  <li><a href="user/change-password">Change Password</a></li>
+                  <li><a href="ticket">Support Ticket</a></li>
+                  <li><a href="user/promotional-tool">Promotional Tools</a></li>
+                  <li><a href="user/twofactor">2FA Security</a></li>
+                  <li><a href="logout"> Logout</a></li>
+                </ul>
               </li>
 
                <li><div id="ytWidget"></div><script src="https://translate.yandex.net/website-widget/v1/widget.js?widgetId=ytWidget&pageLang=en&widgetTheme=light&autoMode=false" type="text/javascript"></script>
@@ -150,7 +150,7 @@
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Payment by Ethereum</h1>
+                <h1>Payment by Etherium</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>payment</li>
@@ -164,13 +164,17 @@
 
     
 
-        <form action="payment-review.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
-            <label style = "color : black;" for="">Enter Amount:</label>
-            <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
 
-            <hr/>
-            <button  class="btn btn-primary" name="submit">Next</button>
-        </form>
+      <form action="eth-deposit.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+        <label style = "color : black;" for="">Enter Amount:</label>
+        <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
+        <hr>
+        <label style = "color : black;" for="">Gateway:</label>
+        <input style = "border: 1px solid gray" type="text" name="gateway" value="Etherium">
+
+        <hr/>
+        <button  class="btn btn-primary" type="submit" name="submit">Next</button>
+      </form>
 
 
     </center>
@@ -193,7 +197,7 @@
                                 </div>
                                 <ul class="info-list clearfix">
                                     <li><i class="fas fa-map-marker-alt"></i>Wordsworth Street, Sydenham, , New Zealand</li>
-                                    <li><i class="fas fa-envelope"></i>Email <a href="mailto:wisetechglobals@gmail.com">Support@wisetechglobals.com</a></li>
+                                    <li><i class="fas fa-envelope"></i>Email <a href="mailto:wisetechglobal@gmail.com">wisetechglobal@gmail.com</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -309,3 +313,5 @@
 <!-- <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="810bb48a-ded2-4e67-b2db-53129045fa2b";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script> -->
 </body>
 </html>
+
+ 

@@ -161,6 +161,27 @@ function createDeposit($conn, $gateway, $amount){
 
 }
 
+function createethDeposit($conn, $gateway, $amount){
+    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:deposit-form.php?error=stmtfailed");
+        exit();
+    }
+
+    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $date = date("d-m-y h:sa");
+
+    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header ('location:eth-deposit.review.php');
+    // require 'mailer.php';
+    exit();
+
+
+}
+
 function createProfile($conn, $name, $username, $email, $country, $mobile, $state, $city, $address, $zip, $btc, $usdt, $eth){
     $sql = "INSERT INTO profiles (fullname, username, email, country, mobile, states, city, addres, zip, btc, usdt, eth) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
