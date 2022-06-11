@@ -257,6 +257,18 @@
                             <label>Email Address</label>
                             <input type="email" name="email" class="form-control" value="" placeholder="Enter email address" required>
                           </div>
+
+                          <div class="form-group">
+                            <label>country</label>
+                            <input type="" name="" class="form-control" value="" placeholder="Enter your country" required>
+                          </div>
+
+                          <div class="form-group">
+                            <label>Mobile</label>
+                            <input type="" name="" class="form-control" value="" placeholder="Enter a mobile number" required>
+                          </div>
+                        
+                        
                         
                         
                                           
@@ -614,7 +626,7 @@
                                 </div>
                                 <ul class="info-list clearfix">
                                     <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
-                                    <li><i class="fas fa-envelope"></i>Email <a href="mainto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
+                                    <li><i class="fas fa-envelope"></i>Email <a href="mainto:wisetechglobals@gmail.com">Support@wisetechglobals.com</a></li>
                                    
                                 </ul>
                             </div>
@@ -682,7 +694,7 @@
                             <h3>Get in touch</h3>
                             <ul class="info-list clearfix">
                                 <li><i class="fas fa-map-marker-alt"></i>74 O'Riordan St, Alexandria NSW, Australlia</li>
-                                <li><i class="fas fa-envelope"></i><a href="mainto:wisetechglobal@gmail.com">support@wisetechglobal@gmail.com</a></li>
+                                <li><i class="fas fa-envelope"></i><a href="mainto:@gmail.com">support@wisetechglobal@gmail.com</a></li>
                                 <li><i class="far fa-clock"></i>Monday to Friday: 9am - 6pm</li>
                             </ul>
                          

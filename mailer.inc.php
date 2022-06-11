@@ -15,12 +15,14 @@ try {
     //Server settings
     $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Enable verbose debug output
     $mail->isSMTP();                                            //Send using SMTP
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->Host       = 'smtp.titan.email';                     //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'wisetechglobals@gmail.com';                     //SMTP username
-    $mail->Password   = 'mendoza1998';                               //SMTP password
+    $mail->Username   = 'support@wisetechglobals.com';                     //SMTP username
+    $mail->Password   = 'Tochukwu878';                               //SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;            //Enable implicit TLS encryption
     $mail->Port       = 465;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->isHTML(true);
+
 
     require 'dbhandler.inc.php';
     // require 'function.inc.php';
@@ -31,7 +33,7 @@ try {
 
 
     //Recipients
-    $mail->setFrom('wisetechglobals@gmail.com', 'WiseTech');
+    $mail->setFrom('support@wisetechglobals.com', 'WiseTech');
     $mail->addAddress($email, $email);     //Add a recipient
     // $mail->addAddress('ellen@example.com');               //Name is optional
     // $mail->addReplyTo('info@example.com', 'Information');
