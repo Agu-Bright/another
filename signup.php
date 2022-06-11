@@ -282,6 +282,12 @@
                             <label>Confirm Password</label>
                             <input type="password" name="repwd" class="form-control" placeholder="Confirm Password" required>
                           </div>
+
+
+                          <div class="form-group">
+                            <label>Referral Code</label>
+                            <input type="text" name="referredby" class="form-control" placeholder="optional" required>
+                          </div>
                         <!-- <div class="form-group">
                             <label >Country</label>
                             <select name="country" id="country" class="form-control" style="color:#fff; background:#000;">

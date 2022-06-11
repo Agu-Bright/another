@@ -7,6 +7,7 @@ if(isset($_POST["submit"])){
     $username = $_POST["username"];
     $pwd = $_POST["pwd"];
     $repwd = $_POST["repwd"];
+    $referredby = $_POST["referredby"];
 
     require_once 'dbhandler.inc.php';
     require_once 'functions.inc.php';
@@ -36,7 +37,7 @@ if(isset($_POST["submit"])){
         exit();
     }
 
-    createUser($conn, $name, $email, $username, $pwd);
+    createUser($conn, $name, $email, $username, $pwd, $referredby);
     
 
 }else{

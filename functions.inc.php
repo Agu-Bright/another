@@ -85,8 +85,8 @@ function uidExists($conn, $username, $email){
 
 
 
-function createUser($conn, $name, $email, $username, $pwd){
-    $sql = "INSERT INTO users (usersName, usersEmail, usersUsername, usersPassword, Code) VALUES (?, ?, ?, ?, ?)";
+function createUser($conn, $name, $email, $username, $pwd, $referredby){
+    $sql = "INSERT INTO users (usersName, usersEmail, usersUsername, usersPassword, Code, referredby) VALUES (?, ?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:signup.php.php?error=stmtfailed");
@@ -96,7 +96,7 @@ function createUser($conn, $name, $email, $username, $pwd){
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $code = rand(100000, 999999);
 
-    mysqli_stmt_bind_param($stmt, "ssssi", $name, $email, $username, $hashedpwd, $code);
+    mysqli_stmt_bind_param($stmt, "ssssis", $name, $email, $username, $hashedpwd, $code, $referredby);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:confirm.php');
