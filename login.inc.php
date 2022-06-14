@@ -1,7 +1,7 @@
 <?php
 
 if (isset($_POST["submit"])) {
-    $username = $_POST["uid"];
+    $username = $_POST["usersUsername"];
     $pwd = $_POST["password"];
 
     require_once 'dbhandler.inc.php';

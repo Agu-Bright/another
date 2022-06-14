@@ -15,7 +15,7 @@ if (isset($_POST["submit"])) {
     $sql = mysqli_query($conn, "SELECT * FROM users ORDER BY usersId DESC LIMIT 1");
     $transactions = mysqli_fetch_row($sql);
 
-    $transactions[5];
+    $transactions[8];
 
 
     if(emptyInputConfirm($username) !==false){
@@ -23,7 +23,7 @@ if (isset($_POST["submit"])) {
         exit();
     }
 
-    if($username === $transactions[5]){
+    if($username === $transactions[8]){
         // echo $username;
         // echo $transactions[5];
         header("location:login.php");

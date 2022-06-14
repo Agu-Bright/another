@@ -243,7 +243,7 @@
 
                    <div class="form-group">
                     <label>User Name</label>
-                    <input type="text" class="form-control" name="uid" placeholder="Enter user name" required>
+                    <input type="text" class="form-control" name="usersUsername" placeholder="Enter username" required>
                   </div>
 
                   <div class="form-group">

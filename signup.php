@@ -244,8 +244,13 @@
                     <form action="signup.inc.php" class="mt-4"  method="post">
                         <input type="hidden" name="" value="">
                         <div class="form-group">
-                            <label>Full Name</label>
-                            <input type="text" class="form-control" name="name" value="" placeholder="Full Name" required>
+                            <label>First Name</label>
+                            <input type="text" class="form-control" name="name" value="" placeholder="First Name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" name="lastname" value="" placeholder="Last Name" required>
                         </div>
                         
                         <div class="form-group">
@@ -260,12 +265,12 @@
 
                           <div class="form-group">
                             <label>country</label>
-                            <input type="" name="" class="form-control" value="" placeholder="Enter your country" required>
+                            <input type="text" name="country" class="form-control" value="" placeholder="Enter your country" required>
                           </div>
 
                           <div class="form-group">
                             <label>Mobile</label>
-                            <input type="" name="" class="form-control" value="" placeholder="Enter a mobile number" required>
+                            <input type="text" name="mobile" class="form-control" value="" placeholder="Enter a mobile number" required>
                           </div>
                         
                         
@@ -285,9 +290,14 @@
 
 
                           <div class="form-group">
-                            <label>Referral Code</label>
-                            <input type="text" name="referredby" class="form-control" placeholder="optional" required>
+                            <label>Refferal Code</label>
+                            <input type="text" name="referral" class="form-control" placeholder="Referral_code (optional)">
                           </div>
+
+
+                        
+
+
                         <!-- <div class="form-group">
                             <label >Country</label>
                             <select name="country" id="country" class="form-control" style="color:#fff; background:#000;">

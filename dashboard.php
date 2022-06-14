@@ -1,4 +1,14 @@
+<?php
 
+session_start();
+require 'functions.inc.php';
+require 'dbhandler.inc.php';
+
+$query = "SELECT * FROM `users` WHERE `usersUsername` = '$_SESSION[useruid]'";
+$result = mysqli_query($conn, $query);
+$result_fetch = mysqli_fetch_assoc($result);
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -189,7 +199,7 @@
                          name="text" 
                          class="form-control" 
                          id="referralURL"
-                         value="" 
+                         value="<?php echo "Your referral code: $result_fetch[referral_code]" ?>"
                   readonly>
 
                   <div class="input-group-append">

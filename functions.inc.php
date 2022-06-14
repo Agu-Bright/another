@@ -85,8 +85,8 @@ function uidExists($conn, $username, $email){
 
 
 
-function createUser($conn, $name, $email, $username, $pwd, $referredby){
-    $sql = "INSERT INTO users (usersName, usersEmail, usersUsername, usersPassword, Code, referredby) VALUES (?, ?, ?, ?, ?, ?)";
+function createUser($conn, $name, $lastname, $username, $email, $country, $mobile, $pwd){
+    $sql = "INSERT INTO users (usersName, lastname, usersUsername, usersEmail,  country, mobile, usersPassword, Code, referral_code, refferal_bonus) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 0)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:signup.php.php?error=stmtfailed");
@@ -95,8 +95,9 @@ function createUser($conn, $name, $email, $username, $pwd, $referredby){
 
     $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $code = rand(100000, 999999);
-
-    mysqli_stmt_bind_param($stmt, "ssssis", $name, $email, $username, $hashedpwd, $code, $referredby);
+    $referral_code = strtoupper(bin2hex(random_bytes(4)));
+    
+    mysqli_stmt_bind_param($stmt, "sssssisis", $name, $lastname, $username, $email, $country, $mobile, $hashedpwd, $code, $referral_code);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:confirm.php');
@@ -135,7 +136,7 @@ function loginUser($conn, $username, $pwd){
         session_start();
         $_SESSION["userid"] = $uidExists["usersId"];
         $_SESSION["useruid"] = $uidExists["usersUsername"];
-        header("location:dashboard.html");
+        header("location:dashboard.php");
         exit();
     }
 }
@@ -176,6 +177,27 @@ function createethDeposit($conn, $gateway, $amount){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:eth-deposit.review.php');
+    // require 'mailer.php';
+    exit();
+
+
+}
+
+function createusdtDeposit($conn, $gateway, $amount){
+    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:deposit-form.php?error=stmtfailed");
+        exit();
+    }
+
+    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $date = date("d-m-y h:sa");
+
+    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header ('location:usdt-deposit.review.php');
     // require 'mailer.php';
     exit();
 
@@ -226,3 +248,40 @@ function codematch($username, $transaction){
 
 }
 
+
+function updateReferral(){
+    $query = "SELECT * FROM `users` WHERE `referral_code` = '$_POST[referral]'";
+    $result = mysqli_query($GLOBALS['conn'], $query);
+    if($result){
+        if(mysqli_num_rows($result)==1){
+            $result_fetch = mysqli_fetch_assoc($result);
+            $bonus = $result_fetch['referral_bonus']+10;
+            $update_query = "UPDATE `users` SET `refferal_bonus` = '$bonus' WHERE `usersEmail` = '$result_fetch[usersEmail]'";
+            if(!mysqli_query($GLOBALS['conn'], $update_query)){
+                echo "
+                    <script>
+                        alert('Cannot run query');
+                        window.location.href='signup.php');
+                    </script>
+                ";
+                exit();
+            }
+        }else{
+            echo "
+            <script>
+                alert('Invalid Referral Code');
+                window.location.href='signup.php');
+            </script>
+            ";
+            exit();
+        }
+    }else{
+        echo "
+        <script>
+            alert('Cannot Process');
+            window.location.href='signup.php');
+        </script>
+        ";
+        exit();
+    }
+}

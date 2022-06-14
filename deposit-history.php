@@ -173,7 +173,7 @@ $transactions = mysqli_fetch_row($sql);
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Deposite History</h1>
+                <h1>Deposit History</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>Deposite History</li>

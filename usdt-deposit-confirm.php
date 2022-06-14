@@ -220,11 +220,11 @@
                                          <p class="my-4 text-center"><br>
 
                                             <div style="text-align: center;">
-                                                <i><font size="5">please send the specified Btc to this wallet:&nbsp;</font></i>
+                                                <i><font size="5">please send the specified usdt to this wallet:&nbsp;</font></i>
                                             </div>
                                         
                                         <div class="input-group">
-                                            <input type="text" name="text" class="form-control" id="referralURL" value="bc1qc7njqwl4gneey50nzk2wgmrwrphmevtgl50qc4" readonly="">
+                                            <input type="text" name="text" class="form-control" id="referralURL" value="TNbSSCJ5BVwyBFDEeo3jStu2S6p98yxzhC" readonly="">
                                             
                                             <div class="input-group-append">
                                                 <span class="input-group-text copytext" id="copyBoard" onclick="myFunction()"> <i class="fa fa-copy" style="font-family: Actor, FontAwesome;"></i> Copy </span>
@@ -241,7 +241,7 @@
 
                                             <figure style="text-align: center;">
                                                 <img class="img-fluid" src="btc .jpg" alt="no be my fault">
-                                                <figcaption>BTC sent to this address will athomatically be allocated to your account after the transaction is confirmed</figcaption>
+                                                <figcaption>usdt sent to this address will athomatically be allocated to your account after the transaction is confirmed</figcaption>
                                             </figure>
 
                                                 <!-- <div style="text-align: center;">
