@@ -141,26 +141,26 @@ function loginUser($conn, $username, $pwd){
     }
 }
 
-function createDeposit($conn, $gateway, $amount){
-    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
-    $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:deposit-form.php?error=stmtfailed");
-        exit();
-    }
+// function createDeposit($conn, $gateway, $amount){
+//     $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+//     $stmt = mysqli_stmt_init($conn);
+//     if (!mysqli_stmt_prepare($stmt, $sql)) {
+//         header("Location:deposit-form.php?error=stmtfailed");
+//         exit();
+//     }
 
-    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-    $date = date("d-m-y h:sa");
+//     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+//     $date = date("d-m-y h:sa");
 
-    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
-    mysqli_stmt_execute($stmt);
-    mysqli_stmt_close($stmt);
-    header ('location:anotherthing.php');
-    // require 'mailer.php';
-    exit();
+//     mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+//     mysqli_stmt_execute($stmt);
+//     mysqli_stmt_close($stmt);
+//     header ('location:anotherthing.php');
+//     // require 'mailer.php';
+//     exit();
 
 
-}
+// }
 
 function createethDeposit($conn, $gateway, $amount){
     $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
@@ -198,6 +198,27 @@ function createusdtDeposit($conn, $gateway, $amount){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:usdt-deposit.review.php');
+    // require 'mailer.php';
+    exit();
+
+
+}
+
+function createbitcoinDeposit($conn, $gateway, $amount){
+    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:deposit-form.php?error=stmtfailed");
+        exit();
+    }
+
+    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $date = date("d-m-y h:sa");
+
+    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header ('location:bitcoin-deposit.review.php');
     // require 'mailer.php';
     exit();
 

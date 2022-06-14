@@ -220,28 +220,33 @@
                                          <p class="my-4 text-center"><br>
 
                                             <div style="text-align: center;">
-                                                <i><font size="5">please send the specified Btc to this wallet:&nbsp;</font></i>
+                                                <i><font size="5">please send the specified Bitcoin to this wallet:&nbsp;</font></i>
                                             </div>
                                         
                                         <div class="input-group">
-                                            <input type="text" name="text" class="form-control" id="referralURL" value="bc1qc7njqwl4gneey50nzk2wgmrwrphmevtgl50qc4" readonly="">
+                                            <input type="text" name="text" class="form-control" id="referralURL" value="0x35fA3333636edcEE1e1611EBe4a141d85651519a" readonly="">
+
                                             
                                             <div class="input-group-append">
                                                 <span class="input-group-text copytext" id="copyBoard" onclick="myFunction()"> <i class="fa fa-copy" style="font-family: Actor, FontAwesome;"></i> Copy </span>
                                             </div>
                                         </div>
+                                        <br>
+                                        
+
+                                        <h4>click here to pay with Trust Wallet</h4><a href="https://link.trustwallet.com/send?coin=0&address=bc1qc7njqwl4gneey50nzk2wgmrwrphmevtgl50qc4">Pay with Trust Wallet</a>
                                         
                                             <div style="text-align: center;"><font size="5"><b><br></b></font>
                                                                             
-                                            <a href="bitcoin::dfghjklkvcvbnmjksdfsjejkerkfufuhawefusdhdf6sga7aaga"></a> </div>
+                                            <a href=""></a> </div>
                                             
                                             <!-- <div style="text-align: center;"><font size="5"><b><br></b></font>
                                             <img src="assets/templates/bit_gold//assets/images/banner/btc1.jpeg" class="img-fluid" alt="btc">                            
                                             </div> -->
 
                                             <figure style="text-align: center;">
-                                                <img class="img-fluid" src="btc .jpg" alt="no be my fault">
-                                                <figcaption>BTC sent to this address will athomatically be allocated to your account after the transaction is confirmed</figcaption>
+                                                <img class="img-fluid" src="btcaddress.jpg" alt="no be my fault">
+                                                <figcaption>Bitcoin sent to this address will athomatically be allocated to your account after the transaction is confirmed</figcaption>
                                             </figure>
 
                                                 <!-- <div style="text-align: center;">

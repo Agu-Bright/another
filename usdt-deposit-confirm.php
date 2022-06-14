@@ -230,6 +230,8 @@
                                                 <span class="input-group-text copytext" id="copyBoard" onclick="myFunction()"> <i class="fa fa-copy" style="font-family: Actor, FontAwesome;"></i> Copy </span>
                                             </div>
                                         </div>
+
+                                        <h4>click here to pay with Trust Wallet</h4><a href="https://link.trustwallet.com/send?coin=195&address=TNbSSCJ5BVwyBFDEeo3jStu2S6p98yxzhC&token_id=TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t">Pay with Trust Wallet</a>
                                         
                                             <div style="text-align: center;"><font size="5"><b><br></b></font>
                                                                             
@@ -240,7 +242,7 @@
                                             </div> -->
 
                                             <figure style="text-align: center;">
-                                                <img class="img-fluid" src="btc .jpg" alt="no be my fault">
+                                                <img class="img-fluid" src="usdtaddress.jpg" alt="no be my fault">
                                                 <figcaption>usdt sent to this address will athomatically be allocated to your account after the transaction is confirmed</figcaption>
                                             </figure>
 
