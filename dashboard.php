@@ -292,7 +292,7 @@ $result_fetch = mysqli_fetch_assoc($result);
                 <div class="d-widget  d-flex flex-wrap">
                   <div class="col-8">
                     <span class="caption">Referral Earnings</span>
-                    <h4 class="currency-amount">$0</h4>
+                    <h4 class="currency-amount"><?php echo "$$result_fetch[refferal_bonus]" ?></h4>
                   </div>
                   <div class="col-4">
                     <div class="icon ml-auto">
