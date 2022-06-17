@@ -204,7 +204,7 @@
                         <div class="card-body  ">
 
                             <!-- Image submit form -->
-                             <form action="deposit-history.php" method="POST" enctype="multipart/form-data">                      
+                             <form action="eth-image-upload.php" method="POST" enctype="multipart/form-data">                      
                                  <div class="row">
                                      
                                     <div class="col-md-12 text-center">
@@ -271,45 +271,35 @@
                                     </div>
      
                                      
-                                         
+                                                        <br>
                                                 <div class="col-md-12">
                                                      <div class="form-group">
-                                                         <label><strong>Upload Proof Of Payment </strong></label>
-                                                         <br>
-     
-                                                         <div class="fileinput fileinput-new " data-provides="fileinput">
-                                                             <div class="fileinput-new thumbnail withdraw-thumbnail"
-                                                                  data-trigger="fileinput">
-                                                                 <img src="https://mutualassets.net/assets/images/default.png" alt="..." >
-                                                             </div>
-                                                             <div class="fileinput-preview fileinput-exists thumbnail wh-200-150"></div>
-     
-                                                             <div class="img-input-div">
-                                                                     <span class="btn btn-info btn-file">
-                                                                         <span class="fileinput-new "> Select Upload Proof Of Payment</span>
-                                                                         <span class="fileinput-exists"> Change</span>
-                                                                         <input type="file" name="upload_proof_of_payment" accept="image/*" >
-                                                                     </span>
-                                                                 <a href="#" class="btn btn-danger fileinput-exists"
-                                                                    data-dismiss="fileinput"> Remove</a>
-                                                             </div>
-     
-                                                         </div>
-     
-     
-     
-                                                     </div>
-                                                 </div>
-                                             
-                                         
-                                     
-     
-                                     <div class="col-md-12">
-                                         <div class="form-group">
-                                             <button type="submit" class="btn cmn-btn btn-block mt-2 text-center">Pay Now</button>
-                                         </div>
-                                     </div>
-     
+                                                    <center>
+
+                                                        <label><strong>Upload Proof Of Payment </strong></label>
+                                                        <br>
+
+
+                                                        <div class="img-input-div">
+
+                                                            <!-- <form action="image-upload.php" method="post" enctype="multipart/form-data"> -->
+                                                                <span class="btn btn-info btn-file">
+                                                                    <!-- <span class="fileinput-new "> </span>
+                                                                    <span class="fileinput-exists"> </span> -->
+                                                                    <input type="file" name="image" accept="image/*" >
+                                                                </span>
+                                                                    <div class="col-md-12">
+                                                                        <div class="form-group">
+                                                                            <button type="submit" name="submit" class="btn cmn-btn btn-block mt-2 text-center">Pay Now</button>
+                                                                        </div>
+                                                                    </div>
+                                                                <!-- </span> -->
+                                                            <!-- <a href="#" class="btn btn-danger fileinput-exists"
+                                                                data-dismiss="fileinput"> Remove</a> -->
+
+                                                            <!-- </form> -->
+                                                        </div>
+                                                    </center>
                                  </div>
      
                              </form>

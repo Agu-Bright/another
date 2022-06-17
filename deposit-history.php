@@ -1,11 +1,13 @@
 
 <?php
+session_start();
+$username = $_SESSION["useruid"];
 
 require 'dbhandler.inc.php';
 // require 'mailer.inc.php';
 
-$sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
-$transactions = mysqli_fetch_row($sql);
+// $sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
+// $transactions = mysqli_fetch_row($sql);
 // echo $transactions[0];
 // echo $transactions[1];
 // echo $transactions[2];
@@ -185,35 +187,43 @@ $transactions = mysqli_fetch_row($sql);
 
 
 
-    <table class="table">
 
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-  <title>Document</title>
-</head>
-<body>
-<table class="table"> -->
+<div class="container">
+        <!-- <h2>Deposit Requests</h2> -->
+       <table class="table">
+          <thead>
+            <tr>
+              <th>Transaction Id</th>
+              <th>Gateway</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th>status</th>
 
 
-  <thead class="table-dark">
+            </tr>
+          </thead>
+          <tbody>
+            <?php
 
-    <tr>
-      <th scope="col">Transaction Id:</th>
-      <th scope="col">Gateway</th>
-      <th scope="col">Amount</th>
-      <th scope="col">Time</th>
-    </tr>
+                $query = "SELECT * FROM `history` WHERE `username` = '$_SESSION[useruid]' ORDER BY `id` DESC";
+                $result = mysqli_query($conn, $query);
+               while ($rows = mysqli_fetch_assoc($result)) {
 
-  </thead>
-  
-  <tbody>
-    <tr>
-      <th scope="row"><?php echo $transactions[0]; ?></th>
-      <td scope="row"><?php echo $transactions[1]; ?></td>
-      <td scope="row"><?php echo $transactions[2]; ?></td>
-      <td scope="row"><?php echo $transactions[3]; ?></td>
-    </tr>
-  </tbody>
-</table>
+            ?>
+                <tr>
+                    <td><?php echo $rows['id'] ?></td>
+                    <td><?php echo $rows['Gateway'] ?></td>
+                    <td><?php echo $rows['Amount'] ?></td>
+                    <td><?php echo $rows['Timess'] ?></td>
+                    <td id="approve">Pending</td>
+                </tr>
+            <?php
+               }
+            ?>
+            
+          </tbody>
+        </table>
+    </div>
 
 
 
@@ -299,6 +309,15 @@ $transactions = mysqli_fetch_row($sql);
 
   <link rel="stylesheet" href="assets/templates/bit_gold/css/iziToast.min.css">
 <script src="assets/templates/bit_gold/js/iziToast.min.js"></script>
+
+<script>
+
+// function approve() {
+//   document.getElementById("approve").innerHTML = "Approved";
+// }
+
+// </script>
+<!-- <button onclick="approve()" type="button" class="btn btn-primary" >Approve</button> -->
 
 
 <script>

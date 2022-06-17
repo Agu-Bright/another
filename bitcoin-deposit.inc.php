@@ -1,4 +1,6 @@
 <?php
+session_start();
+$username = $_SESSION["useruid"];
 
 if(isset($_POST["submit"])){
     
@@ -28,8 +30,8 @@ if(isset($_POST["submit"])){
     exit();
   }
 
-  createbitcoinDeposit($conn, $gateway, $amount);
+  createbitcoinDeposit($conn, $username, $gateway, $amount);
 
-    
+
 
 }

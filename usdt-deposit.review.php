@@ -218,10 +218,10 @@ $transactions = mysqli_fetch_row($sql);
                             </p> -->
 
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Amount: <?php echo $transactions[2];?> usdt</li>
+                              <li class="list-group-item">Amount: <?php echo $transactions[3];?> usdt</li>
                               <li class="list-group-item">Charge: 0 usdt</li>
-                              <li class="list-group-item">Payable: <?php echo $transactions[2];?> usdt</li>
-                              <li class="list-group-item">In Dollars: <?php echo $transactions[2];?> </li>
+                              <li class="list-group-item">Payable: <?php echo $transactions[3];?> usdt</li>
+                              <li class="list-group-item">In Dollars: <?php echo $transactions[3];?> </li>
                           </ul>
                         </ul><a href="usdt-deposit-confirm.php"  class="btn btn-block py-3 font-weight-bold mt-4 cmn-btn">Confirm</a>
                                                 

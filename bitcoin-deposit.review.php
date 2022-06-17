@@ -1,8 +1,11 @@
 <?php
+session_start();
 
 require 'dbhandler.inc.php';
 
-$sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
+
+
+$sql = mysqli_query($conn, "SELECT * FROM history WHERE `username` = '$_SESSION[useruid]' ORDER BY `id` DESC");
 $transactions = mysqli_fetch_row($sql);
 
 
@@ -218,10 +221,10 @@ $transactions = mysqli_fetch_row($sql);
                             </p> -->
 
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item">Amount: <?php echo $transactions[2];?> Btc</li>
+                              <li class="list-group-item">Amount: <?php echo $transactions[3];?> Btc</li>
                               <li class="list-group-item">Charge: 0 Btc</li>
-                              <li class="list-group-item">Payable: <?php echo $transactions[2];?> Btc</li>
-                              <li class="list-group-item">In Dollars: <?php echo $transactions[2];?> </li>
+                              <li class="list-group-item">Payable: <?php echo $transactions[3];?> Btc</li>
+                              <li class="list-group-item">In Dollars: <?php echo $transactions[3];?> </li>
                           </ul>
                         </ul><a href="bitcoin-deposit-confirm.php"  class="btn btn-block py-3 font-weight-bold mt-4 cmn-btn">Confirm</a>
                                                 

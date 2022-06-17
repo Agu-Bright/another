@@ -162,8 +162,13 @@ function loginUser($conn, $username, $pwd){
 
 // }
 
-function createethDeposit($conn, $gateway, $amount){
-    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+
+
+
+
+
+function createethDeposit($conn, $username, $gateway, $amount){
+    $sql = "INSERT INTO history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");
@@ -171,9 +176,9 @@ function createethDeposit($conn, $gateway, $amount){
     }
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-    $date = date("d-m-y h:sa");
+    $date = date("d-m-y");
 
-    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_bind_param($stmt, "ssis", $username, $gateway, $amount, $date);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:eth-deposit.review.php');
@@ -183,8 +188,8 @@ function createethDeposit($conn, $gateway, $amount){
 
 }
 
-function createusdtDeposit($conn, $gateway, $amount){
-    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+function createusdtDeposit($conn, $username, $gateway, $amount){
+    $sql = "INSERT INTO history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");
@@ -192,9 +197,9 @@ function createusdtDeposit($conn, $gateway, $amount){
     }
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-    $date = date("d-m-y h:sa");
+    $date = date("d-m-y");
 
-    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_bind_param($stmt, "ssis", $username, $gateway, $amount, $date);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:usdt-deposit.review.php');
@@ -204,8 +209,8 @@ function createusdtDeposit($conn, $gateway, $amount){
 
 }
 
-function createbitcoinDeposit($conn, $gateway, $amount){
-    $sql = "INSERT INTO history (Gateway, Amount, Timess) VALUES (?, ?, ?)";
+function createbitcoinDeposit($conn, $username, $gateway, $amount){
+    $sql = "INSERT INTO history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");
@@ -213,9 +218,9 @@ function createbitcoinDeposit($conn, $gateway, $amount){
     }
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
-    $date = date("d-m-y h:sa");
+    $date = date("d-m-y");
 
-    mysqli_stmt_bind_param($stmt, "sis", $gateway, $amount, $date);
+    mysqli_stmt_bind_param($stmt, "ssis", $username, $gateway, $amount, $date);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:bitcoin-deposit.review.php');

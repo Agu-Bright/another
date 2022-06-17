@@ -1,4 +1,6 @@
 <?php
+session_start();
+$username = $_SESSION["useruid"];
 
 if(isset($_POST["submit"])){
     
@@ -28,7 +30,7 @@ if(isset($_POST["submit"])){
     exit();
   }
 
-  createethDeposit($conn, $gateway, $amount);
+  createethDeposit($conn, $username, $gateway, $amount);
 
     
 

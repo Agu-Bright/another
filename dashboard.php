@@ -8,6 +8,8 @@ $query = "SELECT * FROM `users` WHERE `usersUsername` = '$_SESSION[useruid]'";
 $result = mysqli_query($conn, $query);
 $result_fetch = mysqli_fetch_assoc($result);
 
+$username = $_SESSION["useruid"];
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
