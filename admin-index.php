@@ -1,5 +1,7 @@
 <?php
 require 'dbhandler.inc.php';
+$query = "SELECT * FROM users";
+$result = mysqli_query($conn, $query);
 ?>
 
 
@@ -409,7 +411,8 @@ require 'dbhandler.inc.php';
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                                 USERS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"><?php
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
                                              $dash_category_query = "SELECT * from users";
                                              $dash_category_query_run = mysqli_query($conn, $dash_category_query);
                                              if($category_total = mysqli_num_rows($dash_category_query_run)){
@@ -417,7 +420,8 @@ require 'dbhandler.inc.php';
                                              }else{
                                                 echo "No users yet.";
                                              }
-                                            ?></div>
+                                            ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-calendar fa-2x text-gray-300"></i>
@@ -434,8 +438,10 @@ require 'dbhandler.inc.php';
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                EARNINGS</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$215,000</div>
+                                                Total Approved Deposits</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                           20
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -481,8 +487,18 @@ require 'dbhandler.inc.php';
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Pending Requests</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                                                Total Deposit Requests</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                            <?php
+                                             $dash_category_query = "SELECT * from history";
+                                             $dash_category_query_run = mysqli_query($conn, $dash_category_query);
+                                             if($category_total = mysqli_num_rows($dash_category_query_run)){
+                                                echo '<h4>' .$category_total.'</h4>';
+                                             }else{
+                                                echo "No deposits yet.";
+                                             }
+                                            ?>
+                                            </div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -752,38 +768,93 @@ require 'dbhandler.inc.php';
     </a> -->
 
     <div class="container">
-        <h2>User Information</h2>
+        <h2>Registered Users</h2>
        <table class="table">
           <thead>
             <tr>
               <th>Firstname</th>
               <th>Lastname</th>
+              <th>Username</th>
               <th>Email</th>
-              <th>Investment</th>
+              <th>Country</th>
+              <th>Phone number</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td>john@example.com</td>
-              <td>Annual Package</td>
-            </tr>
-            <tr>
-              <td>Mary</td>
-              <td>Moe</td>
-              <td>mary@example.com</td>
-              <td>Annual Package</td>
-            </tr>
-            <tr>
-              <td>July</td>
-              <td>Dooley</td>
-              <td>july@example.com</td>
-              <td>Annual Package</td>
-            </tr>
+            <?php
+               while ($rows = mysqli_fetch_assoc($result)) {
+
+            ?>
+                <tr>
+                    <td><?php echo $rows['usersName'] ?></td>
+                    <td><?php echo $rows['lastname'] ?></td>
+                    <td><?php echo $rows['usersUsername'] ?></td>
+                    <td><?php echo $rows['usersEmail'] ?></td>
+                    <td><?php echo $rows['country'] ?></td>
+                    <td><?php echo $rows['mobile'] ?></td>
+                </tr>
+            <?php
+               }
+            ?>
+            
           </tbody>
         </table>
-      </div>
+    </div>
+
+
+    <div class="container">
+        <h2>Deposit Requests</h2>
+        <div class="container" style="padding: 15px; width: 100%; height: 20cm; overflow: scroll;">
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Username</th>
+                <!-- <th>Email</th> -->
+                <th>Gateway</th>
+                <th>Amount</th>
+                <th>status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                    $query = "SELECT * FROM history";
+                    $result = mysqli_query($conn, $query);
+                while ($rows = mysqli_fetch_assoc($result)) {
+
+                ?>
+                    <tr>
+                        <td>hello</td>
+                        <!-- <td>Fine</td> -->
+                        <td><?php echo $rows['Gateway'] ?></td>
+                        <td><?php echo $rows['Amount'] ?></td>
+                        <td><button onclick="approve()" type="button" class="btn btn-primary" >Approve</button></td>
+                    </tr>
+                <?php
+                }
+                ?>
+                
+            </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+    <?php
+        
+        $sql = "SELECT * FROM payment_proof ORDER BY id DESC";
+        $rows = mysqli_query($conn, $sql);
+
+    ?>
+    <?php foreach ($rows as $row) : ?>
+    
+        <tr>
+            <td><?php echo $row["username"]; ?></td>
+            <td><img src="uploads/<?php echo $row["username"]; ?>"></td>
+        </tr>
+
+    <?php endforeach; ?>
     
 
 
@@ -809,6 +880,10 @@ require 'dbhandler.inc.php';
         </div>
     </div>
 
+
+
+    
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -826,6 +901,14 @@ require 'dbhandler.inc.php';
     <!-- Page level custom scripts -->
     <script src="js/demo/chart-area-demo.js"></script>
     <script src="js/demo/chart-pie-demo.js"></script>
+
+    <script>
+
+function approve() {
+  document.getElementById("demo1").innerHTML = "Approved";
+}
+
+</script>
 
 </body>
 

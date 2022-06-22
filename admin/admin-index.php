@@ -846,11 +846,17 @@ $result = mysqli_query($conn, $query);
         $sql = "SELECT * FROM payment_proof";
         $res = mysqli_query($conn, $sql);
 
-        $images = $rows['image_url'];
+        $output = "";
 
-        echo $images;
+        if (mysqli_num_rows($res) > 0) {
+            while ($images = mysqli_fetch_array($res)){
+                $output .= "<img src='".$rows['image_url']."'>";
+            }
+        }
         
     ?>
+        
+    
     
 
 
