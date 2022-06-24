@@ -311,3 +311,27 @@ function updateReferral(){
         exit();
     }
 }
+
+function childreninvestment($conn, $username, $gateway, $amount){
+    $sql = "INSERT INTO investments (username, Gateway, Amount) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if (!mysqli_stmt_prepare($stmt, $sql)) {
+        header("Location:deposit-form.php?error=stmtfailed");
+        exit();
+    }
+
+    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
+    $date = date("d-m-y");
+
+    mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header ('location:investment-history.php');
+    // require 'mailer.php';
+    exit();
+
+
+}
+
+
+

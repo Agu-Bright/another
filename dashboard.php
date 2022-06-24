@@ -216,8 +216,15 @@ $username = $_SESSION["useruid"];
               <div class="col-xl-4 col-sm-6 mb-30">
                 <div class="d-widget d-flex flex-wrap">
                   <div class="col-8">
-                    <span class="caption">Deposit Wallet Balance</span>
-                    <h4 class="currency-amount">$0</h4>
+                    <span class="caption"> Bitcoin Deposit Balance</span>
+                    <h4 class="currency-amount">
+                    <?php
+                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query_result = mysqli_query($conn, $query);
+                      $row = mysqli_fetch_assoc($query_result);
+                      echo $row['sum'];
+                      ?>
+                    </h4>
                   </div>
                   <div class="col-4">
                     <div class="icon ml-auto">
@@ -232,8 +239,15 @@ $username = $_SESSION["useruid"];
               <div class="col-xl-4 col-sm-6 mb-30">
                 <div class="d-widget d-flex flex-wrap">
                   <div class="col-8">
-                    <span class="caption">Interest Wallet Balance</span>
-                    <h4 class="currency-amount">$0</h4>
+                    <span class="caption">Etherium Deposit Balance</span>
+                    <h4 class="currency-amount">
+                    <?php
+                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query_result = mysqli_query($conn, $query);
+                      $row = mysqli_fetch_assoc($query_result);
+                      echo $row['sum'];
+                      ?>
+                    </h4>
                   </div>
                   <div class="col-4">
                     <div class="icon ml-auto">
@@ -247,8 +261,15 @@ $username = $_SESSION["useruid"];
               <div class="col-xl-4 col-sm-6 mb-30">
                 <div class="d-widget d-flex flex-wrap">
                   <div class="col-8">
-                    <span class="caption">Total Investment</span>
-                    <h4 class="currency-amount">$0</h4>
+                    <span class="caption">USDT Deposit Balance</span>
+                    <h4 class="currency-amount">
+                      <?php
+                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query_result = mysqli_query($conn, $query);
+                      $row = mysqli_fetch_assoc($query_result);
+                      echo $row['sum'];
+                      ?>
+                    </h4>
                   </div>
                   <div class="col-4">
                     <div class="icon ml-auto">

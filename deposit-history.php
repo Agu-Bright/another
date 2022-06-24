@@ -215,7 +215,7 @@ require 'dbhandler.inc.php';
                     <td><?php echo $rows['Gateway'] ?></td>
                     <td><?php echo $rows['Amount'] ?></td>
                     <td><?php echo $rows['Timess'] ?></td>
-                    <td id="approve">Pending</td>
+                    <td><?php echo $rows['paymentstatus'] ?></td>
                 </tr>
             <?php
                }

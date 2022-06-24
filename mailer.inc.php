@@ -35,14 +35,10 @@ try {
     //Recipients
     $mail->setFrom('support@wisetechglobals.com', 'WiseTech');
     $mail->addAddress($email, $email);     //Add a recipient
-    // $mail->addAddress('ellen@example.com');               //Name is optional
-    // $mail->addReplyTo('info@example.com', 'Information');
-    // $mail->addCC('cc@example.com');
-    // $mail->addBCC('bcc@example.com');
+    
 
-    //Attachments
-    // $mail->addAttachment('/var/tmp/file.tar.gz');         //Add attachments
-    // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');    //Optional name
+
+    
     $user = $_POST['name'];
     // $email = $_GET['Code'];
     $body = "Hello ". $name. ",". "<p>You have successfully registered with WiseTech, Experienced. Specialized. Professional. We always Strive to be leaders and strategic planning of our development for years to come!</p><p>Your Confirmation code is: </p>". $code."<p>Thank You!</p>";
