@@ -187,7 +187,7 @@
     
 
 
-    <form action="children'spack.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+    <form action="children'sbtcpack.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
     <label style = "color : black;" for="">Enter Amount:</label>
     <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
     <hr>

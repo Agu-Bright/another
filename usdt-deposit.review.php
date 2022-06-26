@@ -2,7 +2,7 @@
 
 require 'dbhandler.inc.php';
 
-$sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
+$sql = mysqli_query($conn, "SELECT * FROM usdt_histroy ORDER BY id DESC LIMIT 1");
 $transactions = mysqli_fetch_row($sql);
 
 

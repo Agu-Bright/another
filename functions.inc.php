@@ -168,7 +168,7 @@ function loginUser($conn, $username, $pwd){
 
 
 function createethDeposit($conn, $username, $gateway, $amount){
-    $sql = "INSERT INTO history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO eth_history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");
@@ -189,7 +189,7 @@ function createethDeposit($conn, $username, $gateway, $amount){
 }
 
 function createusdtDeposit($conn, $username, $gateway, $amount){
-    $sql = "INSERT INTO history (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
+    $sql = "INSERT INTO usdt_histroy (username, Gateway, Amount, Timess) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");

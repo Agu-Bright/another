@@ -124,11 +124,11 @@ $username = $_SESSION["useruid"];
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav main-menu ml-auto">
 
-              <li> <a href="dashboard.html">Dashboard</a></li>
+              <li> <a href="dashboard.php">Dashboard</a></li>
               <li><a href="investment.html">Investment</a></li>
               <li><a href="deposite.html">Deposit</a></li>
               <li><a href="withdraw.html">Withdraw</a></li>
-              <li><a href="transaction.html">Transactions</a></li>
+              <!-- <li><a href="transaction.html">Transactions</a></li> -->
               
               <li class="menu_has_children"><a href="#0">Referrals</a>
                 <ul class="sub-menu">
@@ -141,11 +141,11 @@ $username = $_SESSION["useruid"];
 
                 <ul class="sub-menu">
                   <li><a href="profile.php">Profile Settings</a></li>
-                  <li><a href="transferbal.html">Transfer Balance</a></li>
-                  <li><a href="change-password.html">Change Password</a></li>
-                  <li><a href="support-ticket.html">Support Ticket</a></li>
-                  <li><a href="promotional-tool.html">Promotional Tools</a></li>
-                  <li><a href="twofactor.html">2FA Security</a></li>
+                  <!-- <li><a href="transferbal.html">Transfer Balance</a></li> -->
+                  <!-- <li><a href="change-password.html">Change Password</a></li> -->
+                  <!-- <li><a href="support-ticket.html">Support Ticket</a></li> -->
+                  <!-- <li><a href="promotional-tool.html">Promotional Tools</a></li> -->
+                  <!-- <li><a href="twofactor.html">2FA Security</a></li> -->
                   <li><a href="logout.inc.php"> Logout</a></li>
                 </ul>
 
@@ -156,8 +156,10 @@ $username = $_SESSION["useruid"];
             </ul>
             <div class="nav-right">
               <ul class="account-menu ml-3">
-                  <li class="icon"><a href="dashboard.html"><i class="las la-user"></i></a></li>
+                  <li class="icon"><i class="las la-user"></i></li>
               </ul>  
+
+              <h2></h2>
           
             </div>
           </div>
@@ -219,7 +221,7 @@ $username = $_SESSION["useruid"];
                     <span class="caption"> Bitcoin Deposit Balance</span>
                     <h4 class="currency-amount">
                     <?php
-                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query = "SELECT SUM(Amount) AS sum FROM `history` WHERE `paymentstatus`='Approved' AND `username`='$username'";
                       $query_result = mysqli_query($conn, $query);
                       $row = mysqli_fetch_assoc($query_result);
                       echo $row['sum'];
@@ -242,7 +244,7 @@ $username = $_SESSION["useruid"];
                     <span class="caption">Etherium Deposit Balance</span>
                     <h4 class="currency-amount">
                     <?php
-                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query = "SELECT SUM(Amount) AS sum FROM `eth_history` WHERE `paymentstatus`='Approved' AND `username`='$username'";
                       $query_result = mysqli_query($conn, $query);
                       $row = mysqli_fetch_assoc($query_result);
                       echo $row['sum'];
@@ -264,7 +266,7 @@ $username = $_SESSION["useruid"];
                     <span class="caption">USDT Deposit Balance</span>
                     <h4 class="currency-amount">
                       <?php
-                      $query = "SELECT SUM(Amount) AS sum FROM `history`";
+                      $query = "SELECT SUM(Amount) AS sum FROM `usdt_histroy` WHERE `paymentstatus`='Approved' AND `username`='$username'";
                       $query_result = mysqli_query($conn, $query);
                       $row = mysqli_fetch_assoc($query_result);
                       echo $row['sum'];
