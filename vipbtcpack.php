@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <!-- CSS only -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-<!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-</head>
-<body>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -123,11 +107,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav main-menu ml-auto">
-              <li> <a href="dashboard.php">Dashboard</a></li>
+              <li> <a href="dashboard.html">Dashboard</a></li>
               <li><a href="plan.html">Investment</a></li>
               <li><a href="deposite.html">Deposit</a></li>
               <li><a href="withdraw.html">Withdraw</a></li>
-              <!-- <li><a href="transactions.html">Transactions</a></li> -->
+              <li><a href="transactions.html">Transactions</a></li>
               
               <li class="menu_has_children"><a href="#0">Referrals</a>
                 <ul class="sub-menu">
@@ -141,11 +125,11 @@
 
                 <ul class="sub-menu">
                   <li><a href="profile.html">Profile Settings</a></li>
-                  <!-- <li><a href="transferbal.html">Transfer Balance</a></li>
+                  <li><a href="transferbal.html">Transfer Balance</a></li>
                   <li><a href="change-password.html">Change Password</a></li>
                   <li><a href="support-ticket.html">Support Ticket</a></li>
                   <li><a href="promotional-tool.html">Promotional Tools</a></li>
-                  <li><a href="twofactor.html">2FA Security</a></li> -->
+                  <li><a href="twofactor.html">2FA Security</a></li>
                   <li><a href="logout"> Logout</a></li>
                 </ul>
               </li>
@@ -187,39 +171,140 @@
         </div>
     </section>
     <!--End Page Title-->
-<div style="display:flex;">
 
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Bitcoin</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'sbtcpack.php" class="btn btn-primary">Continue</a>
+<section class="pt-60 pb-120">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 text-center">
+        <div class="section-header">
+          <h2 class="section-title"><span class="font-weight-normal">Investment</span> <b style= "color:#000;">Plans</b></h2>
+          <p>To invest in Vip's Pack you must have a minimum balance of $50,000 in your Deposit wallet</p>
+        </div>
+      </div>
     </div>
+<center>
+
+    
+
+
+    <form action="vipbtcpack.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+    <label style = "color : black;" for="">Enter Amount:</label>
+    <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
+    <hr>
+    <label style = "color : black;" for="">Gateway:</label>
+    <input style = "border: 1px solid gray" type="text" name="gateway" value="Bitcoin">
+    <hr/>
+    <button  class="btn btn-primary" type="submit" name="submit">Invest</button>
+    
+    </form>
+
+
+</center>
+    <!-- row end -->
+    <!-- <div class="row mb-none-30 justify-content-center">
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+      <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+        <h4 class="package-card__title  mb-2" style="color:white;">2022 Anniversary Pack</h4>
+        <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 10% daily</li>
+            <li>Min. Investment - $3000</li>
+            <li>Max. Investment - inlimited</li>
+            <li>Anual </li>
+            <li style="color:#fff;">Total   100%+ <span class="badge badge-success">Capital</span></li>
+        </ul>
+          <div class="package-card__range mt-5 " style="color:#fff;" > $3000  - $Unlimited</div>
+            <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+      </div>
+          <! package-card end -->
+      <!-- </div>
+
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+        <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+        <h4 class="package-card__title  mb-2" style="color:white;">Children's pack</h4>
+          <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 2% daily</li>
+            <li>Min. Investment - $50</li>
+            <li>Max. Investment - $300</li>
+            <li>For 90 Days </li>
+            <li style="color:#fff;">Total   180%+ <span class="badge badge-success">Capital</span></li>
+          </ul>
+
+          <div class="package-card__range mt-5 " style="color:#fff;" >$50  - $300</div>
+          <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+        </div> -->
+        <!-- package-card end -->
+      <!-- </div>
+        <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+        <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+        <h4 class="package-card__title  mb-2" style="color:white;">Basic Pack</h4>
+          <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 3% daily</li>
+            <li>Min. Invetment - $300</li>
+            <li>Max. Invetment - $10,000</li>
+            <li>For 7 Days </li>
+            <li style="color:#fff;">Total   21% + <span class="badge badge-success">Capital</span></li>
+          </ul>
+
+          <div class="package-card__range mt-5 " style="color:#fff;" > $300  - $10000</div>
+          <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+        </div>
+        <! package-card end -->
+      <!-- </div> -->
+
+       
+        <!-- <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+        <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+          <h4 class="package-card__title  mb-2" style="color:white;">Diamond Pack</h4>
+          
+          <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 4% daily</li>
+            <li>Min. Investment - $10,000</li>
+            <li>Max. Investment - $50,000</li>
+            <li>For 7 Days </li>
+            <li style="color:#fff;">Total   28% + <span class="badge badge-success">Capital</span></li>
+          </ul>
+
+          <div class="package-card__range mt-5 " style="color:#fff;" >$10000  - $50000</div>
+         <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+        </div>
+         package-card end -->
+      <!-- </div> -->
+
+      <!-- <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+        <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+          <h4 class="package-card__title  mb-2" style="color:white;">VIP Package Plan</h4>
+          <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 5% daily</li>
+            <li>Min. Investment -$50 000</li>
+            <li>Max. Investment -$100 000</li>
+            <li>For 7 Days </li>
+            <li style="color:#fff;">Total   35%+ <span class="badge badge-success">Capital</span></li>
+          </ul>
+          <div class="package-card__range mt-5 " style="color:#fff;" >$50000  - $100000</div>
+          <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+        </div>
+         package-card end -->
+      <!-- </div> -->
+
+      <!-- <div class="col-xl-3 col-lg-4 col-md-6 mb-30">
+        <div class="package-card text-center bg_img" data-background="assets/templates/bit_gold/images/bg/bg-4.png">
+          <h4 class="package-card__title  mb-2" style="color:white;">Shareholders Package Plan</h4>
+          <ul class="package-card__features mt-4" style = "color:#fff">
+            <li>Return 6% daily</li>
+            <li>Min. Investment - $100,000</li>
+            <li>Max. Investment - Unlimited</li>
+            <li>For 7 Days </li>
+            <li style="color:#fff;">Total   42%+ <span class="badge badge-success">Capital</span></li>
+          </ul>
+          <div class="package-card__range mt-5 " style="color:#fff;" >$100,000  - Unlimited</div>
+          <a href="deposite.html"  class="cmn-btn btn-md mt-4 investButton">Invest Now</a>
+        </div>
+        package-card end -->
+      <!-- </div> -->
+    <!-- </div> --> 
+ 
   </div>
-
-
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Etherium</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'sethpack.php" class="btn btn-primary">Continue</a>
-    </div>
-  </div>
-
-
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Usdt</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'susdtpack.php" class="btn btn-primary">Continue</a>
-    </div>
-  </div>
-
-
-</div>
+</section>
     
     
 <!-- Modal -->
@@ -542,25 +627,3 @@
 
   </body>
 </html> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-</body>
-</html>
-

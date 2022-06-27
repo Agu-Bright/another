@@ -44,6 +44,10 @@
   <link rel="stylesheet" href="assets/templates/bit_gold//css/custom.css">
   <link rel="stylesheet" href="assets/templates/bit_gold/css/color.php?color=cc5454&secondColor=000000">
    <link rel="stylesheet" href="assets/templates/bit_gold//assets/css/style.css">
+   <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
    
    
   </head>
@@ -158,7 +162,7 @@
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Vip Pack Investment Plan</h1>
+                <h1>Children's Pack Investment Plan</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>Investment Plan</li>
@@ -173,8 +177,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-6 text-center">
         <div class="section-header">
-          <!-- <h2 class="section-title"><span class="font-weight-normal">Investment</span> <b style= "color:#000;">Plans</b></h2>
-          <p>To make a solid investment, you have to know where you are investing. Find a plan which is best for you.</p> -->
+          <h2 class="section-title"><span class="font-weight-normal">Investment</span> <b style= "color:#000;">Plans</b></h2>
+          <p>To invest in Children's Pack you must have a minimum balance of $10000 in your Deposit wallet</p>
         </div>
       </div>
     </div>
@@ -183,15 +187,15 @@
     
 
 
-    <form action="eth-deposit.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
+    <form action="diamondethpack.inc.php" class = "container-md border border-primary mt-5 mb-5 pt-4 pb-4" method="POST">
     <label style = "color : black;" for="">Enter Amount:</label>
     <input style = "border: 1px solid gray" type="text" name="amount" placeholder="0.00">
     <hr>
     <label style = "color : black;" for="">Gateway:</label>
     <input style = "border: 1px solid gray" type="text" name="gateway" value="Etherium">
-
     <hr/>
-    <button  class="btn btn-primary" type="submit" name="submit">Next</button>
+    <button  class="btn btn-primary" type="submit" name="submit">Invest</button>
+    
     </form>
 
 

@@ -22,17 +22,17 @@ if(isset($_POST["submit"])){
     exit();
   }
 
-  $query = "SELECT SUM(Amount) AS sum FROM `history` WHERE paymentstatus='Approved' AND username='$username'";
+  $query = "SELECT SUM(Amount) AS sum FROM `usdt_histroy` WHERE paymentstatus='Approved' AND username='$username'";
   $query_result = mysqli_query($conn, $query);
   $row = mysqli_fetch_assoc($query_result);
-  $row['sum'];
+  echo $row['sum'];
 
   if($amount < $row['sum']){
 
-    childreninvestment($conn, $username, $gateway, $amount);
+    diamondinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'spack.php");
+    header("location:children'susdtpack.php");
   }
   
 

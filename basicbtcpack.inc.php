@@ -29,7 +29,7 @@ if(isset($_POST["submit"])){
 
   if($amount < $row['sum']){
 
-    childreninvestment($conn, $username, $gateway, $amount);
+    basicinvestment($conn, $username, $gateway, $amount);
 
   }else{
     header("location:children'spack.php");

@@ -123,11 +123,11 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav main-menu ml-auto">
-              <li> <a href="dashboard.php">Dashboard</a></li>
+              <li> <a href="dashboard.html">Dashboard</a></li>
               <li><a href="plan.html">Investment</a></li>
               <li><a href="deposite.html">Deposit</a></li>
               <li><a href="withdraw.html">Withdraw</a></li>
-              <!-- <li><a href="transactions.html">Transactions</a></li> -->
+              <li><a href="transactions.html">Transactions</a></li>
               
               <li class="menu_has_children"><a href="#0">Referrals</a>
                 <ul class="sub-menu">
@@ -141,11 +141,11 @@
 
                 <ul class="sub-menu">
                   <li><a href="profile.html">Profile Settings</a></li>
-                  <!-- <li><a href="transferbal.html">Transfer Balance</a></li>
+                  <li><a href="transferbal.html">Transfer Balance</a></li>
                   <li><a href="change-password.html">Change Password</a></li>
                   <li><a href="support-ticket.html">Support Ticket</a></li>
                   <li><a href="promotional-tool.html">Promotional Tools</a></li>
-                  <li><a href="twofactor.html">2FA Security</a></li> -->
+                  <li><a href="twofactor.html">2FA Security</a></li>
                   <li><a href="logout"> Logout</a></li>
                 </ul>
               </li>
@@ -178,7 +178,7 @@
         <div class="auto-container">
             <div class="content-box clearfix"  style = "padding-top:30%;">
                 
-                <h1>Children's Pack Investment Plan</h1>
+                <h1>Basic Pack Investment Plan</h1>
                 <ul class="bread-crumb clearfix">
                     <li><a href="index.html">Home</a></li>
                     <li>Investment Plan</li>
@@ -187,36 +187,36 @@
         </div>
     </section>
     <!--End Page Title-->
-<div style="display:flex;">
+    <div style="display:flex;">
 
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Bitcoin</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'sbtcpack.php" class="btn btn-primary">Continue</a>
-    </div>
+<div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Invest with Bitcoin</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="basicbtcpack.php" class="btn btn-primary">Continue</a>
   </div>
+</div>
 
 
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Etherium</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'sethpack.php" class="btn btn-primary">Continue</a>
-    </div>
+<div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Invest with Etherium</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="basicethpack.php" class="btn btn-primary">Continue</a>
   </div>
+</div>
 
 
-  <div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Invest with Usdt</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="children'susdtpack.php" class="btn btn-primary">Continue</a>
-    </div>
+<div class="card" style="width: 18rem; padding: 3cm; width:15cm;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Invest with Usdt</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="basicusdtpack.php" class="btn btn-primary">Continue</a>
   </div>
+</div>
 
 
 </div>
