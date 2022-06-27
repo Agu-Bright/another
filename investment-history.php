@@ -217,9 +217,30 @@ require 'dbhandler.inc.php';
                     
                     <td>
                         <?php 
-                            $x = $rows['Amount'];
-                            $y = 20;
-                            echo $x + $y; 
+                            $capital = $rows['Amount'];
+                            $percentageincrease = 5;
+                            //echo $x + $y; 
+
+
+
+                            $startday = new DateTime(date("Y/m/d"));
+                            $today = new DateTime();
+                            $days  = $today->diff($startday)->format('%a');
+                            $enddate = Date('Y/m/d', strtotime('+3 days'));
+                        
+                            
+                        
+                            // echo "<br><br>";
+                        
+                            //$capital = 20000;
+                            $percentageincrease = 5;
+                            $percentage= ($capital / 100) * $percentageincrease;
+                            // $roi = $capital + $percentage;
+                        
+                            echo $value = $capital + $days*$percentage." "."(Increases after 24hrs)";
+
+
+
                         ?>
                     </td>
                 </tr>

@@ -313,17 +313,24 @@ function updateReferral(){
 }
 
 function childreninvestment($conn, $username, $gateway, $amount){
-    $sql = "INSERT INTO investments (username, Gateway, Amount) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO investments (username, Gateway, Amount, Earnings) VALUES (?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location:deposit-form.php?error=stmtfailed");
         exit();
     }
 
-    // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 2;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
-    mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
+    mysqli_stmt_bind_param($stmt, "ssii", $username, $gateway, $amount, $value);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:investment-history.php');
@@ -343,6 +350,14 @@ function shareholdersinvestment($conn, $username, $gateway, $amount){
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 6;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
     mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
     mysqli_stmt_execute($stmt);
@@ -364,6 +379,14 @@ function diamondinvestment($conn, $username, $gateway, $amount){
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 4;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
     mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
     mysqli_stmt_execute($stmt);
@@ -385,6 +408,14 @@ function anniversaryinvestment($conn, $username, $gateway, $amount){
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 10;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
     mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
     mysqli_stmt_execute($stmt);
@@ -406,6 +437,14 @@ function basicinvestment($conn, $username, $gateway, $amount){
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 3;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
     mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
     mysqli_stmt_execute($stmt);
@@ -427,6 +466,14 @@ function vipinvestment($conn, $username, $gateway, $amount){
 
     // $hashedpwd = password_hash($pwd, PASSWORD_DEFAULT);
     $date = date("d-m-y");
+    $percentageincrease = 5;
+    $startday = new DateTime(date("Y/m/d"));
+    $today = new DateTime();
+    $days  = $today->diff($startday)->format('%a');
+    $enddate = Date('Y/m/d', strtotime('+3 days'));
+    $percentageincrease = 2;
+    $percentage= ($amount / 100) * $percentageincrease;
+    $value = $amount + $days*$percentage;
 
     mysqli_stmt_bind_param($stmt, "ssi", $username, $gateway, $amount);
     mysqli_stmt_execute($stmt);
