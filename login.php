@@ -455,6 +455,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js" integrity="sha512-6kvhZ/39gRVLmoM/6JxbbJVTYzL/gnbDVsHACLx/31IREU4l3sI7yeO0d4gw8xU5Mpmm/17LMaDHOCf+TvuC2Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="assets/templates/bit_gold/assets/js/script.js"></script>
+<script src="//code.tidio.co/44wnsett5q987nispfzelf3u6gvrc6ah.js" async></script>
 
 
 

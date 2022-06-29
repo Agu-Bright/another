@@ -393,6 +393,7 @@
 <script src="assets/templates/bit_gold//assets/js/nav-tool.js"></script>
 <script src="assets/templates/bit_gold//assets/js/TweenMax.min.js"></script>
 <script src="assets/templates/bit_gold//assets/js/script.js"></script>
+<script src="//code.tidio.co/44wnsett5q987nispfzelf3u6gvrc6ah.js" async></script>
 
 
 
