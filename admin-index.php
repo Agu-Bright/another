@@ -534,6 +534,57 @@ $result = mysqli_query($conn, $query);
     </div>
 
 
+
+    <div class="container">
+        <h2>Withdrawal Request</h2>
+        <div class="container" style="padding: 15px; width: 100%; height: 20cm; overflow: scroll;">
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Transaction Id</th>
+                <th>Username</th>
+                <!-- <th>Email</th> -->
+                <th>Gateway</th>
+                <th>Amount</th>
+                <th>Wallet Address</th>
+                <th>status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                    $query = "SELECT * FROM withdrawal";
+                    $result = mysqli_query($conn, $query);
+                    while ($rows = mysqli_fetch_assoc($result)) {
+
+                ?>
+                    <tr>
+                        <td><?php echo $rows['id'] ?></td>
+                        <td><?php echo $rows['username'] ?></td>
+                        <!-- <td>Fine</td> -->
+                        <td><?php echo $rows['Gateway'] ?></td>
+                        <td><?php echo $rows['Amount'] ?></td>
+                        <td><?php echo $rows['wallet_address'] ?></td>
+                        <td>
+                            <form action="admin-withdrawal.inc.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $rows['id'] ?>" >
+                                <input type="hidden" name="approve" value="Approved" >
+                                <input type="submit" name="submit" value="Approve">
+                            </form>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
+                
+            </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+
     
 
     <?php
