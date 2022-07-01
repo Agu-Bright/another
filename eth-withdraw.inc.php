@@ -74,6 +74,7 @@ if(isset($_POST["submit"])){
     mysqli_stmt_close($stmt);
     
     header('location:withdraw-history.php');
+    require 'withdrawal-mailer.php';
     
     exit();
   }else {
