@@ -16,9 +16,9 @@ $username = $_SESSION["useruid"];
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wisetech Global - Dashboard</title>
-    <meta name="description" content="Wisetech Global is at your service with its user-friendly features, secure infrastructure, and applications that make a difference. A firm for profitable investment solution, your financial stability, and freedom is our priority, join us to make your financial dreams come true">
-    <meta name="keywords" content="Wisetech Global,Most Trusted Cryptocurrency Platform,wisetechglobal.com">
+    <title>Firmcedar - Dashboard</title>
+    <meta name="description" content="Firmcedar is at your service with its user-friendly features, secure infrastructure, and applications that make a difference. A firm for profitable investment solution, your financial stability, and freedom is our priority, join us to make your financial dreams come true">
+    <meta name="keywords" content="Firmcedar,Most Trusted Cryptocurrency Platform,wisetechglobal.com">
     <link rel="shortcut icon" href="assets/images/logoIcon/favicon.png" type="image/x-icon">
 
     
@@ -27,13 +27,13 @@ $username = $_SESSION["useruid"];
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="Wisetech Gloabl - Dashboard">
     
-    <meta itemprop="name" content="WiseTech Global - Dashboard">
+    <meta itemprop="name" content="Firmcedar - Dashboard">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="assets/images/seo/616fc12563d871634713893.png">
     
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Wisetech Global">
-    <meta property="og:description" content="Wisetech Global">
+    <meta property="og:title" content="Firmcedar">
+    <meta property="og:description" content="Firmcedar">
     <meta property="og:image" content="assets/images/seo/616fc12563d871634713893.png"/>
     <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="600" />
@@ -414,7 +414,7 @@ $username = $_SESSION["useruid"];
         </div>
         <div class="footer-bottom">
             <div class="auto-container">
-                <div class="copyright"><p>&copy; 2022 <a href="index.html">Wisetech Global</a> - Investment. All rights reserved.</p></div>
+                <div class="copyright"><p>&copy; 2022 <a href="index.html">Firmcedar</a> - Investment. All rights reserved.</p></div>
             </div>
         </div>
     </footer>
