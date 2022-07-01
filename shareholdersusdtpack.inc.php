@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     shareholdersinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'susdtpack.php");
+    header("location:shareholdersusdtpack.php?error=Insufficientfunds");
   }
   
 

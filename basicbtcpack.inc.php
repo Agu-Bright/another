@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     basicinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'spack.php");
+    header("location:basicbtcpack.php?error=Insufficientfunds");
   }
   
 

@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     vipinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'spack.php");
+    header("location:vipethpack.php?error=Insufficientfunds");
   }
   
 

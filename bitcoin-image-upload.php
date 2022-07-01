@@ -36,6 +36,7 @@ if(isset($_POST['submit']) && isset($_FILES['image'])){
                 $sql = "INSERT INTO payment_proof(username, image_url) VALUES('$username', '$new_img_name')";
                 mysqli_query($conn, $sql);
                 header("Location:deposit-history.php");
+                require 'btc-deposit-mailer.php';
 
             }else {
                 $em = "You can't upload files of this type";
@@ -44,7 +45,7 @@ if(isset($_POST['submit']) && isset($_FILES['image'])){
         }
     }else {
         $em = "Unknown error occurred!";
-        header("Location: bitcoin_deposit-confirm.php?error=$em");
+        header("Location: bitcoin-deposit-confirm.php?error=$em");
     }
 }else{
     echo "no file was chosen o";

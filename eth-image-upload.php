@@ -36,6 +36,8 @@ if(isset($_POST['submit']) && isset($_FILES['image'])){
                 $sql = "INSERT INTO payment_proof(username, image_url) VALUES('$username', '$new_img_name')";
                 mysqli_query($conn, $sql);
                 header("Location:deposit-history.php");
+                require 'eth-deposit-mailer.php';
+
 
             }else {
                 $em = "You can't upload files of this type";
@@ -44,7 +46,7 @@ if(isset($_POST['submit']) && isset($_FILES['image'])){
         }
     }else {
         $em = "Unknown error occurred!";
-        header("Location: eth_deposit-confirm.php?error=$em");
+        header("Location: eth-deposit-confirm.php?error=$em");
     }
 }else{
     echo "no file was chosen o";

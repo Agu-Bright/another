@@ -195,6 +195,32 @@
     <input style = "border: 1px solid gray" type="text" name="gateway" value="Bitcoin">
     <hr/>
     <button  class="btn btn-primary" type="submit" name="submit">Invest</button>
+
+    <?php
+
+      if (isset($_GET["error"])) {
+        if ($_GET["error"] == "Insufficientfunds"){
+          echo "<p>Insufficent Funds</P>";
+        }
+
+        if($_GET["error"] == "stmtfailed"){
+          echo "<p>Sorry, an error occured.</P>";
+        }
+
+        if($_GET["error"] == "invalidnumber"){
+          echo "<p>Invalid figures</P>";
+        }
+        
+        if($_GET["error"] == "emptyamount"){
+          echo "<p>Empty spaces</P>";
+        }
+
+        if($_GET["error"] == "wrongaddress"){
+          echo "<p>Improper wallet address.</P>";
+        }
+      }
+
+    ?>
     
     </form>
 

@@ -10,16 +10,15 @@ if(isset($_POST["submit"])){
   require 'functions.inc.php';
   require 'dbhandler.inc.php';
 
-  // echo $amount;
+  // $query = "SELECT * FROM `history` WHERE `username` = '$_SESSION[useruid]' ORDER BY `id` DESC";
+  // $result = mysqli_query($conn, $query);
+  // $rows = mysqli_fetch_assoc($result);
 
+  // echo $rows['Amount'];
 
-  // require_once 'dbhandler.inc.php';
-  // require_once 'functions.inc.php';
+  
 
-
-  // if(is_numeric($amount)){
-  //   header("location:anotherthing.php");
-  // }
+ 
 
   if(!is_numeric($amount)){
     header("location:deposit-form.php?invalidnumber");
@@ -29,6 +28,8 @@ if(isset($_POST["submit"])){
     header("location:deposit-form.php?emptyamount");
     exit();
   }
+
+  
 
   createbitcoinDeposit($conn, $username, $gateway, $amount);
 

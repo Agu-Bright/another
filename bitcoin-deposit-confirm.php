@@ -318,6 +318,32 @@
 
                                                                 <!-- </form> -->
                                                              </div>
+
+                                                             <?php
+
+                                                                if (isset($_GET["error"])) {
+                                                                if ($_GET["error"] == "Unknown error occurred!"){
+                                                                    echo "<p>Please choose a file</P>";
+                                                                }
+
+                                                                if($_GET["error"] == "stmtfailed"){
+                                                                    echo "<p>Sorry, an error occured.</P>";
+                                                                }
+
+                                                                if($_GET["error"] == "invalidnumber"){
+                                                                    echo "<p>Invalid figures</P>";
+                                                                }
+                                                                
+                                                                if($_GET["error"] == "emptyamount"){
+                                                                    echo "<p>Empty spaces</P>";
+                                                                }
+
+                                                                if($_GET["error"] == "wrongaddress"){
+                                                                    echo "<p>Improper wallet address.</P>";
+                                                                }
+                                                                }
+
+                                                            ?>
                                                             </center>
      
                                                          </div>

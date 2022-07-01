@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     anniversaryinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'susdtpack.php");
+    header("location:anniversaryusdtpack.php?error=Insufficientfunds");
   }
   
 

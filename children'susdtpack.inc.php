@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     childreninvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'susdtpack.php");
+    header("location:children'susdtpack.php?error=Insufficientfunds");
   }
   
 

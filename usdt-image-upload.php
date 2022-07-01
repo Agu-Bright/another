@@ -36,10 +36,11 @@ if(isset($_POST['submit']) && isset($_FILES['image'])){
                 $sql = "INSERT INTO payment_proof(username, image_url) VALUES('$username', '$new_img_name')";
                 mysqli_query($conn, $sql);
                 header("Location:deposit-history.php");
+                require 'usdt-deposit-mailer.php';
 
             }else {
                 $em = "You can't upload files of this type";
-                header("Location: usdt_deposit-confirm.php?error=$em");
+                header("Location: usdt-deposit-confirm.php?error=$em");
             }
         }
     }else {

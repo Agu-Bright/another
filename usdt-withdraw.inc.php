@@ -6,12 +6,13 @@ if(isset($_POST["submit"])){
     
   $amount = $_POST["amount"];
   $gateway = $_POST["gateway"];
-  $wallet = $_POST["wallet"];
+  $wallet = $_POST['wallet'];
 
   require 'functions.inc.php';
   require 'dbhandler.inc.php';
 
   
+
   if(!is_numeric($amount)){
     header("location:usdt-withdraw.php?error=invalidnumber");
   }
@@ -27,31 +28,26 @@ if(isset($_POST["submit"])){
 
 
 
-  $query = mysqli_query($conn, "SELECT * FROM `usdt_histroy` WHERE `username` = '$username' AND `paymentstatus` = 'Approved' ORDER BY id DESC LIMIT 1");
-  $result = mysqli_fetch_row($query);
-  
-  $id = $result[0];
+  $query = "SELECT SUM(Amount) AS sum FROM `usdt_histroy` WHERE `paymentstatus`='Approved' AND `username`='$username'";
+  $query_result = mysqli_query($conn, $query);
+  $row = mysqli_fetch_assoc($query_result);
+  $answer = $row['sum'];
+  $debit = -$amount;
 
   
 
-  $query = "SELECT * FROM `usdt_histroy` WHERE `username` = '$_SESSION[useruid]' AND `id` = '$id'";
-  $result = mysqli_query($conn, $query);
-  $rows = mysqli_fetch_assoc($result);
-  $answer = $rows['Amount'];
+  
   
 
   if($answer > $amount){
-
-    $sql = "UPDATE `usdt_histroy` SET `Amount` = '$answer' WHERE `id` = $id";
-    $anything = mysqli_query($conn, $sql);
 
 
     
     $sql = "INSERT INTO withdrawal (username, Gateway, Amount, Timess, wallet_address) VALUES (?, ?, ?, ?, ?)";
     $stmt = mysqli_stmt_init($conn);
-    if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location:usdt-withdraw.php?error=stmtfailed");
-        exit();
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+      header("Location:usdt-withdraw.php?error=stmtfailed");
+      exit();
     }
     
     
@@ -60,31 +56,31 @@ if(isset($_POST["submit"])){
     mysqli_stmt_bind_param($stmt, "ssiss", $username, $gateway, $amount, $date, $wallet);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
+
+
+    //DEBITTING HIS DEPOSITS 
+
+    $sql = "INSERT INTO usdt_histroy (username, Gateway, Amount, Timess, paymentstatus) VALUES (?, ?, ?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)) {
+      header("Location:usdt-withdraw.php?error=stmtfailed");
+      exit();
+    }
+    $approved = "Approved";
+    $date = date("d-m-y");
+    
+    mysqli_stmt_bind_param($stmt, "ssiss", $username, $gateway, $debit, $date, $approved);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    
     header('location:withdraw-history.php');
+    
     exit();
-    
-    
-    
-
-
-
-    
-    
-
   }else {
     header('location:usdt-withdraw.php?error=Insufficientfunds');
   }
-
-  echo "<br>";
-  
-
-  
-
-  
-
-  
+    
 
 
+} 
 
-
-}

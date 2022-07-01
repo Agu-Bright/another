@@ -32,7 +32,7 @@ if(isset($_POST["submit"])){
     diamondinvestment($conn, $username, $gateway, $amount);
 
   }else{
-    header("location:children'spack.php");
+    header("location:diamondbtcpack.php?error=Insufficientfunds");
   }
   
 

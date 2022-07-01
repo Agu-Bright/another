@@ -224,7 +224,7 @@ function createbitcoinDeposit($conn, $username, $gateway, $amount){
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header ('location:bitcoin-deposit.review.php');
-    // require 'mailer.php';
+    //require 'mailer.php';
     exit();
 
 

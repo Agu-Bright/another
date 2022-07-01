@@ -1,4 +1,6 @@
 <?php
+session_start();
+$username = $_SESSION["useruid"];
 //Import PHPMailer classes into the global namespace
 //These must be at the top of your script, not inside a function
 use PHPMailer\PHPMailer\PHPMailer;
@@ -25,27 +27,32 @@ try {
 
 
     require 'dbhandler.inc.php';
-    // require 'function.inc.php';
-    $sql = "SELECT * FROM users";
-    $result = mysqli_query($conn, $sql);
-    $email = $_POST['email'];
-    $confirm = $_POST['pwd'];
+    $query = "SELECT * FROM `users` WHERE `usersUsername` = '$_SESSION[useruid]'";
+    $result = mysqli_query($conn, $query);
+    $rows = mysqli_fetch_assoc($result);
+    $email = $rows['usersEmail'];
 
 
     //Recipients
     $mail->setFrom('support@firmcedar.com', 'FirmCedar');
     $mail->addAddress($email, $email);     //Add a recipient
+
+
+    $sql = mysqli_query($conn, "SELECT * FROM history ORDER BY id DESC LIMIT 1");
+    $resultS = mysqli_fetch_row($sql);
+    $amount = $resultS[3];
+    $id = $resultS[0];
+    $username= $resultS[1];
     
 
 
     
-    $user = $_POST['name'];
-    // $email = $_GET['Code'];
-    $body = "Hello ". $name. ",". "<p>You have successfully registered with WiseTech, Experienced. Specialized. Professional. We always Strive to be leaders and strategic planning of our development for years to come!</p><p>Your Confirmation code is: </p>". $code."<p>Thank You!</p>";
+    $name = $rows['usersName'];
+    $body = "Hello ". $name. ",". "<p>Your deposit request of ".$amount." is via BITCOIN submitted successfully.</p><p>Details of your payment:</p><p>Amount: ".$amount."Btc</p><p>Charge: 0 Btc</p><p>Transaction ID: ".$username ."".$id."</p><p>Amount: ".$amount."Btc</p><p>Thank you!</p>";
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Registration Successfull';
+    $mail->Subject = 'Deposit Request Successfully Submitted';
     $mail->Body    = $body;
     $mail->AltBody = strip_tags($body);
 

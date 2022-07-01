@@ -390,7 +390,7 @@ $result = mysqli_query($conn, $query);
     
 
     <div class="container">
-        <h2>Deposit Requests</h2>
+        <h2>Bitcoin Deposit Requests</h2>
         <div class="container" style="padding: 15px; width: 100%; height: 20cm; overflow: scroll;">
             <table class="table">
             <thead>
@@ -419,7 +419,7 @@ $result = mysqli_query($conn, $query);
                         <td><?php echo $rows['Gateway'] ?></td>
                         <td><?php echo $rows['Amount'] ?></td>
                         <td>
-                            <form action="admin-index.inc.php" method="POST">
+                            <form action="admin-bitcoin.inc.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $rows['id'] ?>" >
                                 <input type="hidden" name="approve" value="Approved" >
                                 <input type="submit" name="submit" value="Approve">
@@ -435,6 +435,106 @@ $result = mysqli_query($conn, $query);
         </div>
        
     </div>
+
+
+    <div class="container">
+        <h2>Etherium Deposit Requests</h2>
+        <div class="container" style="padding: 15px; width: 100%; height: 20cm; overflow: scroll;">
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Transaction Id</th>
+                <th>Username</th>
+                <!-- <th>Email</th> -->
+                <th>Gateway</th>
+                <th>Amount</th>
+                <th>status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                    $query = "SELECT * FROM eth_history";
+                    $result = mysqli_query($conn, $query);
+                    while ($rows = mysqli_fetch_assoc($result)) {
+
+                ?>
+                    <tr>
+                        <td><?php echo $rows['id'] ?></td>
+                        <td><?php echo $rows['username'] ?></td>
+                        <!-- <td>Fine</td> -->
+                        <td><?php echo $rows['Gateway'] ?></td>
+                        <td><?php echo $rows['Amount'] ?></td>
+                        <td>
+                            <form action="admin-eth.inc.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $rows['id'] ?>" >
+                                <input type="hidden" name="approve" value="Approved" >
+                                <input type="submit" name="submit" value="Approve">
+                            </form>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
+                
+            </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+
+
+    <div class="container">
+        <h2>Usdt Deposit Requests</h2>
+        <div class="container" style="padding: 15px; width: 100%; height: 20cm; overflow: scroll;">
+            <table class="table">
+            <thead>
+                <tr>
+                <th>Transaction Id</th>
+                <th>Username</th>
+                <!-- <th>Email</th> -->
+                <th>Gateway</th>
+                <th>Amount</th>
+                <th>status</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+
+                    $query = "SELECT * FROM usdt_histroy";
+                    $result = mysqli_query($conn, $query);
+                    while ($rows = mysqli_fetch_assoc($result)) {
+
+                ?>
+                    <tr>
+                        <td><?php echo $rows['id'] ?></td>
+                        <td><?php echo $rows['username'] ?></td>
+                        <!-- <td>Fine</td> -->
+                        <td><?php echo $rows['Gateway'] ?></td>
+                        <td><?php echo $rows['Amount'] ?></td>
+                        <td>
+                            <form action="admin-usdt.inc.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $rows['id'] ?>" >
+                                <input type="hidden" name="approve" value="Approved" >
+                                <input type="submit" name="submit" value="Approve">
+                            </form>
+                        </td>
+                    </tr>
+                <?php
+                }
+                ?>
+                
+            </tbody>
+            </table>
+        </div>
+       
+    </div>
+
+
+    
 
     <?php
 
